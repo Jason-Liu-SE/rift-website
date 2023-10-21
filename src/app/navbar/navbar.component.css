@@ -1,6 +1,8 @@
 .rift-navbar {
+    position: absolute;
     padding: 0px 10px;
     height: 50px;
+    z-index: 1;
 }
 
 .menu-links {
@@ -22,7 +24,7 @@
 
 .nav-link {
     display: flex;
-    color: rgb(50, 50, 50);
+    color: rgb(244, 244, 244);
     text-align: center;
     padding: 0 16px;
     text-decoration: none;
