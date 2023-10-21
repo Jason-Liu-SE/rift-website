@@ -1,0 +1,48 @@
+.rift-navbar {
+    padding: 0px 10px;
+    height: 50px;
+}
+
+.menu-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    align-items: center;
+}
+
+.link-container {
+    display: flex;
+    height: 100%;
+    float: left;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    color: rgb(50, 50, 50);
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+    align-items: center;
+    height: 100%;
+}
+
+.link-container .nav-link:hover {
+    text-decoration: underline;
+    color: rgb(255, 0, 230);
+}
+
+.nav-button {
+    height: 100%;
+}
+
+.rift-logo {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+}
