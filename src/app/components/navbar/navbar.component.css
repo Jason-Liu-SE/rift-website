@@ -1,8 +1,9 @@
 .rift-navbar {
-    position: absolute;
+    position: fixed;
+    top: 0px;
     padding: 0px 10px;
     height: 50px;
-    z-index: 1;
+    z-index: 10;
 }
 
 .menu-links {
