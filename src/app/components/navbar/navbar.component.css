@@ -1,7 +1,11 @@
 .rift-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: fixed;
     top: 0px;
     padding: 0px 10px;
+    width: calc(100% - 10px);
     height: 50px;
     z-index: 10;
 }
@@ -19,7 +23,6 @@
 .link-container {
     display: flex;
     height: 100%;
-    float: left;
     align-items: center;
 }
 
@@ -40,7 +43,9 @@
 }
 
 .nav-button {
+    display: flex;
     height: 100%;
+    align-items: center;
 }
 
 .rift-logo {
