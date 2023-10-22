@@ -4,7 +4,12 @@
 }
 
 .card-content {
-    background-image: url('../../../assets/home/spawn-tree.png');
+    background: radial-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.3)
+        ),
+        url('../../../assets/home/spawn-tree.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;

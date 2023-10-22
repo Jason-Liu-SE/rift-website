@@ -28,6 +28,7 @@
     text-align: center;
     padding: 0 16px;
     text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     align-items: center;
     height: 100%;
 }
