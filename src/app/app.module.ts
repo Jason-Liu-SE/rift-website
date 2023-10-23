@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageTemplateComponent } from './pages/page-template/page-template.component';
 import { BackgroundImageCardComponent } from './components/background-image-card/background-image-card.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { BackgroundImageCardComponent } from './components/background-image-card
         FooterComponent,
         PageTemplateComponent,
         BackgroundImageCardComponent,
+        ContactComponent,
         routingComponents
     ],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],

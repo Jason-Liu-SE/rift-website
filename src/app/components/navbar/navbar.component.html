@@ -1,7 +1,7 @@
 <nav class="rift-navbar">
     <ul class="menu-links">
         <li class="link-container">
-            <a class="nav-button" href="#home">
+            <a class="nav-button" routerLink="/home">
                 <img
                     class="rift-logo"
                     src="../../assets/navbar/rift-logo.png"
@@ -10,16 +10,33 @@
             </a>
         </li>
         <li class="link-container">
-            <a class="nav-link" href="#home"><p>Home</p></a>
+            <a
+                class="nav-link"
+                routerLink="/home"
+                routerLinkActive="link-active"
+                ><p>Home</p></a
+            >
         </li>
         <li class="link-container">
-            <a class="nav-link" href="#news"><p>News</p></a>
+            <a
+                class="nav-link"
+                routerLink="/news"
+                routerLinkActive="link-active"
+                ><p>News</p></a
+            >
         </li>
         <li class="link-container">
-            <a class="nav-link" href="#gallery"><p>Gallery</p></a>
+            <a
+                class="nav-link"
+                routerLink="/gallery"
+                routerLinkActive="link-active"
+                ><p>Gallery</p></a
+            >
         </li>
         <li class="link-container">
-            <a class="nav-link" href="#map"><p>Map</p></a>
+            <a class="nav-link" routerLink="/map" routerLinkActive="link-active"
+                ><p>Map</p></a
+            >
         </li>
     </ul>
     <ul class="menu-links"></ul>
@@ -28,7 +45,12 @@
             <a class="nav-link" href="#contact"><p>Contact</p></a>
         </li>
         <li class="link-container">
-            <a class="nav-link" href="#about"><p>About</p></a>
+            <a
+                class="nav-link"
+                routerLink="/about"
+                routerLinkActive="link-active"
+                ><p>About</p></a
+            >
         </li>
     </ul>
 </nav>
