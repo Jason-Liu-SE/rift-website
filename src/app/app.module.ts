@@ -5,29 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './pages/home/home.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageTemplateComponent } from './pages/page-template/page-template.component';
 import { BackgroundImageCardComponent } from './components/background-image-card/background-image-card.component';
-import { NewsComponent } from './pages/news/news.component';
-import { GalleryComponent } from './pages/gallery/gallery.component';
-import { MapComponent } from './pages/map/map.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { AboutComponent } from './pages/about/about.component';
+import { NewsPageComponent } from './pages/news-page/news-page.component';
+import { GalleryPageComponent } from './pages/gallery-page/gallery-page.component';
+import { MapPageComponent } from './pages/map-page/map-page.component';
+import { ContactPageComponent } from './components/contact/contact.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
-        HomeComponent,
+        HomePageComponent,
         FooterComponent,
         PageTemplateComponent,
         BackgroundImageCardComponent,
-        NewsComponent,
-        GalleryComponent,
-        MapComponent,
-        ContactComponent,
-        AboutComponent
+        NewsPageComponent,
+        GalleryPageComponent,
+        MapPageComponent,
+        ContactPageComponent,
+        AboutPageComponent
     ],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
     providers: [],

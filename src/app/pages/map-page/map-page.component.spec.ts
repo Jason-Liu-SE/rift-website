@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactPageComponent } from './contact.component';
+import { MapPageComponent } from './map-page.component';
 
-describe('ContactPageComponent', () => {
-    let component: ContactPageComponent;
-    let fixture: ComponentFixture<ContactPageComponent>;
+describe('MapPageComponent', () => {
+    let component: MapPageComponent;
+    let fixture: ComponentFixture<MapPageComponent>;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [ContactPageComponent]
+            declarations: [MapPageComponent]
         });
-        fixture = TestBed.createComponent(ContactPageComponent);
+        fixture = TestBed.createComponent(MapPageComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
