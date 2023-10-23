@@ -1,11 +1,16 @@
+* {
+    --h-navbar-edge-padding: 10px;
+    --h-logo-edge-padding: 10px;
+}
+
 .rift-navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
     top: 0px;
-    padding: 0px 10px;
-    width: calc(100% - 10px);
+    padding: 0px var(--h-navbar-edge-padding);
+    width: calc(100% - 2 * var(--h-navbar-edge-padding));
     height: 50px;
     z-index: 10;
 }
@@ -51,7 +56,7 @@
 .rift-logo {
     display: block;
     margin: 0 auto;
-    padding: 10px;
-    max-width: calc(100% - 20px);
-    max-height: calc(100% - 20px);
+    padding: var(--h-logo-edge-padding);
+    max-width: calc(100% - 2 * var(--h-logo-edge-padding));
+    max-height: calc(100% - 2 * var(--h-logo-edge-padding));
 }
