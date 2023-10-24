@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageTemplateDirective } from 'src/app/directives/page-template.directive';
-import { PageTemplateE } from './page-template-e.component';
+import { PageTemplateType } from './page-template-type.component';
 
 @Component({
     selector: 'app-page-template',
@@ -30,7 +30,7 @@ export class PageTemplateComponent implements OnInit {
         const viewContainerRef = this.appPageTemplateHost.viewContainerRef;
         viewContainerRef.clear();
 
-        const componentRef = viewContainerRef.createComponent<PageTemplateE>(
+        const componentRef = viewContainerRef.createComponent<PageTemplateType>(
             this.mainComponent
         );
     }
