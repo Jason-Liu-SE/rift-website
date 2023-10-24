@@ -5,6 +5,7 @@ import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { GalleryPageComponent } from './pages/gallery-page/gallery-page.component';
 import { MapPageComponent } from './pages/map-page/map-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { PageTemplateComponent } from './pages/page-template/page-template.component';
 
 const routes: Routes = [
     {
@@ -14,23 +15,33 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: HomePageComponent
+        component: PageTemplateComponent,
+        title: 'The Rift - Home',
+        data: { component: HomePageComponent }
     },
     {
         path: 'news',
-        component: NewsPageComponent
+        component: PageTemplateComponent,
+        title: 'The Rift - News',
+        data: { component: NewsPageComponent }
     },
     {
         path: 'gallery',
-        component: GalleryPageComponent
+        component: PageTemplateComponent,
+        title: 'The Rift - Gallery',
+        data: { component: GalleryPageComponent }
     },
     {
         path: 'map',
-        component: MapPageComponent
+        component: PageTemplateComponent,
+        title: 'The Rift - Map',
+        data: { component: MapPageComponent }
     },
     {
         path: 'about',
-        component: AboutPageComponent
+        component: PageTemplateComponent,
+        title: 'The Rift - About',
+        data: { component: AboutPageComponent }
     },
     {
         path: '**',

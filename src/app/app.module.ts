@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PageTemplateComponent } from './pages/page-template/page-template.component';
 import { BackgroundImageCardComponent } from './components/background-image-card/background-image-card.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PageTemplateDirective } from './directives/page-template.directive';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './components/contact/contact.component';
         PageTemplateComponent,
         BackgroundImageCardComponent,
         ContactComponent,
-        routingComponents
+        routingComponents,
+        PageTemplateDirective
     ],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
     providers: [],
