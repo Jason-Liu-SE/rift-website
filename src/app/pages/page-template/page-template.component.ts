@@ -10,11 +10,16 @@ import { PageTemplateType } from './page-template-type.component';
 })
 export class PageTemplateComponent implements OnInit {
     public mainComponent: Type<any>;
+    public isTransparent!: boolean;
 
     @ViewChild(PageTemplateDirective, { static: true })
     appPageTemplateHost!: PageTemplateDirective;
 
     constructor(private route: ActivatedRoute) {
+        const isTransparentProp = this.route.snapshot.data['isTransparent'];
+
+        this.isTransparent =
+            isTransparentProp == null ? true : isTransparentProp;
         this.mainComponent = this.route.snapshot.data['component'];
     }
 

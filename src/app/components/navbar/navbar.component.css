@@ -15,6 +15,10 @@
     z-index: 10;
 }
 
+.rift-navbar.opaque {
+    background-color: rgb(44, 44, 44);
+}
+
 .menu-links {
     display: flex;
     list-style-type: none;

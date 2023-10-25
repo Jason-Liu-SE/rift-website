@@ -55,7 +55,7 @@ const routes: Routes = [
         path: '**',
         component: PageTemplateComponent,
         title: 'The Rift - Error 404',
-        data: { component: ErrorPageComponent }
+        data: { component: ErrorPageComponent, isTransparent: false }
     }
 ];
 

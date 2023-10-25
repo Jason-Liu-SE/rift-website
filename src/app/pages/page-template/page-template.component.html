@@ -1,6 +1,9 @@
 <div class="page-template">
     <div class="upper-content">
-        <app-navbar class="app-navbar"></app-navbar>
+        <app-navbar
+            class="app-navbar"
+            [transparent]="isTransparent"
+        ></app-navbar>
         <ng-template class="template" appPageTemplateHost></ng-template>
     </div>
     <app-footer class="app-footer"></app-footer>
