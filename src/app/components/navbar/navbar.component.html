@@ -1,4 +1,5 @@
-<nav class="rift-navbar {{ isTransparent ? '' : 'opaque' }}">
+<div class="rift-navbar" *ngIf="!isTransparent"></div>
+<nav class="rift-navbar always-visible {{ isTransparent ? '' : 'opaque' }}">
     <ul class="menu-links">
         <li class="link-container">
             <a class="nav-button" routerLink="/home">

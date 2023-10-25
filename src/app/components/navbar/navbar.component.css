@@ -7,11 +7,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: calc(100% - 2 * var(--h-navbar-edge-padding));
+    height: 50px;
+}
+
+.always-visible {
     position: fixed;
     top: 0px;
     padding: 0px var(--h-navbar-edge-padding);
-    width: calc(100% - 2 * var(--h-navbar-edge-padding));
-    height: 50px;
     z-index: 10;
 }
 
