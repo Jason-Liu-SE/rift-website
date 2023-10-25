@@ -1,10 +1,20 @@
 .page-template {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 100vh;
 }
 
 .template {
-    display: block;
+    display: flex;
+    flex: 1;
+}
+
+.upper-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.lower-content {
+    justify-content: flex-end;
 }

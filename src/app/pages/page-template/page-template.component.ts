@@ -25,7 +25,6 @@ export class PageTemplateComponent implements OnInit {
 
     // displaying the passed component dynamically
     displayComponent(): void {
-        console.log(this.appPageTemplateHost);
         const viewContainerRef = this.appPageTemplateHost.viewContainerRef;
         viewContainerRef.clear();
 
