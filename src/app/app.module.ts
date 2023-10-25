@@ -10,6 +10,7 @@ import { PageTemplateComponent } from './pages/page-template/page-template.compo
 import { BackgroundImageCardComponent } from './components/background-image-card/background-image-card.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PageTemplateDirective } from './directives/page-template.directive';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,12 @@ import { PageTemplateDirective } from './directives/page-template.directive';
         ContactComponent,
         PageTemplateDirective
     ],
-    imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule
+    ],
     providers: [],
     bootstrap: [AppComponent]
 })

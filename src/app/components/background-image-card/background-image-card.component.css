@@ -51,7 +51,11 @@
     width: 500px;
 }
 
-.action-button {
+.actions * {
+    margin: 0 10px;
+}
+
+/* .action-button {
     background-color: rgb(255, 0, 208);
     width: 100px;
     border: 2px solid rgb(26, 26, 26);
@@ -68,4 +72,4 @@
     background-color: white;
     border-color: rgb(103, 103, 103);
     color: rgb(103, 103, 103);
-}
+} */
