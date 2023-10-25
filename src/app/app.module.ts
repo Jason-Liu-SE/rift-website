@@ -13,13 +13,13 @@ import { PageTemplateDirective } from './directives/page-template.directive';
 
 @NgModule({
     declarations: [
+        routingComponents,
         AppComponent,
         NavbarComponent,
         FooterComponent,
         PageTemplateComponent,
         BackgroundImageCardComponent,
         ContactComponent,
-        routingComponents,
         PageTemplateDirective
     ],
     imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],

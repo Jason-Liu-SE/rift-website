@@ -6,6 +6,8 @@ import { GalleryPageComponent } from './pages/gallery-page/gallery-page.componen
 import { MapPageComponent } from './pages/map-page/map-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { PageTemplateComponent } from './pages/page-template/page-template.component';
+import { DownloadsPageComponent } from './pages/downloads-page/downloads-page.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 const routes: Routes = [
     {
@@ -44,8 +46,16 @@ const routes: Routes = [
         data: { component: AboutPageComponent }
     },
     {
+        path: 'downloads',
+        component: PageTemplateComponent,
+        title: 'The Rift - Downloads',
+        data: { component: DownloadsPageComponent }
+    },
+    {
         path: '**',
-        redirectTo: '/home'
+        component: PageTemplateComponent,
+        title: 'The Rift - Error 404',
+        data: { component: ErrorPageComponent }
     }
 ];
 
@@ -60,5 +70,7 @@ export const routingComponents = [
     NewsPageComponent,
     GalleryPageComponent,
     MapPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    DownloadsPageComponent,
+    ErrorPageComponent
 ];

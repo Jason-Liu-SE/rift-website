@@ -1,10 +1,4 @@
-import {
-    Component,
-    OnInit,
-    ViewContainerRef,
-    ViewChild,
-    Type
-} from '@angular/core';
+import { Component, OnInit, ViewChild, Type } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageTemplateDirective } from 'src/app/directives/page-template.directive';
 import { PageTemplateType } from './page-template-type.component';
