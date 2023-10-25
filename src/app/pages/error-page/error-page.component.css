@@ -1,0 +1,29 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-page > * {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.text-components > * {
+    margin: 10px 0;
+}
+
+.title {
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+.message {
+    font-size: medium;
+    text-align: center;
+}
