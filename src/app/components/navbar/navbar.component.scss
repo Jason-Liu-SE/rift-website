@@ -1,3 +1,5 @@
+@import '../../../theme-colours.scss';
+
 * {
     --h-navbar-edge-padding: 10px;
     --h-logo-edge-padding: 10px;
@@ -50,7 +52,7 @@
     height: 100%;
 }
 
-.nav-link:hover {
+.nav-link:not(.link-active):hover {
     color: rgb(255, 0, 230);
 }
 
@@ -84,6 +86,11 @@
 }
 
 .nav-link.link-active p {
-    background-color: rgba(195, 0, 255, 0.493);
+    background-color: rgba($colour-galactic-purple, 0.7);
     border-radius: 5px;
+}
+
+.nav-link.link-active:hover {
+    color: rgb(41, 41, 41);
+    text-shadow: none;
 }
