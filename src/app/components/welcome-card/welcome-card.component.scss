@@ -1,6 +1,11 @@
 $max-content-width: 500px;
 $max-image-height: 150px;
 
+.card-wrapper {
+    overflow: hidden;
+    max-height: 100vh;
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -23,7 +28,7 @@ $max-image-height: 150px;
 
 .card-content {
     position: absolute;
-    top: 50%;
+    top: clamp(0px, 50vh, 50%);
     transform: translate(0, -50%);
     width: 85%;
     white-space: pre-wrap;
