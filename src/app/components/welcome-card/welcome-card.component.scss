@@ -1,3 +1,6 @@
+$max-content-width: 500px;
+$max-image-height: 150px;
+
 .card {
     display: flex;
     flex-direction: column;
@@ -9,7 +12,7 @@
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.3)
         ),
-        url('../../../assets/home/spawn-tree.png');
+        url('../../../assets/home/1.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -27,16 +30,26 @@
     text-align: center;
 }
 
-.card-content * {
+.card-container {
+    width: $max-content-width;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    padding: 30px 10px;
+    margin: 0px;
+    border-radius: 20px;
+    border: 1px solid #333333;
+}
+
+.card-container > * {
     margin: 10px 0;
 }
 
 .image-header {
-    width: 500px;
+    width: 100%;
 }
 
 .image {
-    width: 100%;
+    height: $max-image-height;
 }
 
 .description {
@@ -44,32 +57,14 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     font-weight: 800;
     font-size: larger;
-    width: 500px;
+    width: 100%;
+    padding-bottom: 40px;
 }
 
 .actions {
-    width: 500px;
+    width: 100%;
 }
 
 .actions * {
     margin: 0 10px;
 }
-
-/* .action-button {
-    background-color: rgb(255, 0, 208);
-    width: 100px;
-    border: 2px solid rgb(26, 26, 26);
-    border-radius: 5px;
-    padding: 3px 5px;
-    text-align: center;
-    font-weight: 800;
-    color: black;
-    transition: color 0.1s, background-color 0.1s;
-}
-
-.action-button:hover {
-    cursor: pointer;
-    background-color: white;
-    border-color: rgb(103, 103, 103);
-    color: rgb(103, 103, 103);
-} */

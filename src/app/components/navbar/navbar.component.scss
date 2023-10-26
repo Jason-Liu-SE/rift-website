@@ -1,22 +1,20 @@
 @import '../../../theme-colours.scss';
 
-* {
-    --h-navbar-edge-padding: 10px;
-    --h-logo-edge-padding: 10px;
-}
+$h-navbar-edge-padding: 10px;
+$h-logo-edge-padding: 10px;
 
 .rift-navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: calc(100% - 2 * var(--h-navbar-edge-padding));
+    width: calc(100% - 2 * $h-navbar-edge-padding);
     height: 50px;
 }
 
 .always-visible {
     position: fixed;
     top: 0px;
-    padding: 0px var(--h-navbar-edge-padding);
+    padding: 0px $h-navbar-edge-padding;
     z-index: 10;
 }
 
@@ -81,9 +79,9 @@
 .rift-logo {
     display: block;
     margin: 0 auto;
-    padding: var(--h-logo-edge-padding);
-    max-width: calc(100% - 2 * var(--h-logo-edge-padding));
-    max-height: calc(100% - 2 * var(--h-logo-edge-padding));
+    padding: $h-logo-edge-padding;
+    max-width: calc(100% - 2 * $h-logo-edge-padding);
+    max-height: calc(100% - 2 * $h-logo-edge-padding);
 }
 
 .nav-link.link-active p {
