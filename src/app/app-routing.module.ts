@@ -74,3 +74,5 @@ export const routingComponents = [
     DownloadsPageComponent,
     ErrorPageComponent
 ];
+
+imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })];

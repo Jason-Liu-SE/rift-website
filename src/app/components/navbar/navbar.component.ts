@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
     selector: 'app-navbar',
@@ -7,4 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class NavbarComponent {
     @Input('transparent') public isTransparent: boolean = true;
+
+    constructor(private viewportScroller: ViewportScroller) {}
+
+    public handlePageScroll(elemId: string): void {
+        this.viewportScroller.scrollToAnchor(elemId);
+    }
 }
