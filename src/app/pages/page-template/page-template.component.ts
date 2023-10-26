@@ -6,7 +6,7 @@ import { PageTemplateType } from './page-template-type.component';
 @Component({
     selector: 'app-page-template',
     templateUrl: './page-template.component.html',
-    styleUrls: ['./page-template.component.css']
+    styleUrls: ['./page-template.component.scss']
 })
 export class PageTemplateComponent implements OnInit {
     public mainComponent: Type<any>;
