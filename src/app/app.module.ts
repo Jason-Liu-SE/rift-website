@@ -11,6 +11,7 @@ import { BackgroundImageCardComponent } from './components/background-image-card
 import { ContactComponent } from './components/contact/contact.component';
 import { PageTemplateDirective } from './directives/page-template.directive';
 import { MatButtonModule } from '@angular/material/button';
+import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { MatButtonModule } from '@angular/material/button';
         PageTemplateComponent,
         BackgroundImageCardComponent,
         ContactComponent,
-        PageTemplateDirective
+        PageTemplateDirective,
+        WelcomeCardComponent
     ],
     imports: [
         BrowserModule,
