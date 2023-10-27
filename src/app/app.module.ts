@@ -12,6 +12,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { PageTemplateDirective } from './directives/page-template.directive';
 import { MatButtonModule } from '@angular/material/button';
 import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
+import { TextSectionCardComponent } from './components/text-section-card/text-section-card.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { WelcomeCardComponent } from './components/welcome-card/welcome-card.com
         BackgroundImageCardComponent,
         ContactComponent,
         PageTemplateDirective,
-        WelcomeCardComponent
+        WelcomeCardComponent,
+        TextSectionCardComponent
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,11 @@
+<div class="text-section-card {{ backgroundTypeClass }}">
+    <div class="text-container">
+        <h2 class="title {{ titlePositionClass }}" *ngIf="showTitle">
+            {{ title }}
+        </h2>
+        <div class="section-break" *ngIf="showTitle && showContent"></div>
+        <p class="content {{ titlePositionClass }}" *ngIf="showContent">
+            {{ content }}
+        </p>
+    </div>
+</div>
