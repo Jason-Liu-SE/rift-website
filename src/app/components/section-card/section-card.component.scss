@@ -1,0 +1,114 @@
+@import '../../../theme-colours.scss';
+
+$edge-padding-x: 50px;
+$edge-padding-y: 50px;
+$inner-padding-x: 20px;
+$inner-padding-y: 20px;
+
+.dark-background {
+    color: $color-light-text;
+    background-color: $colour-dark-background;
+}
+
+.light-background {
+    color: $color-dark-text;
+    background-color: $colour-light-background;
+}
+
+.empty-background {
+    color: $color-dark-text;
+    background-color: #ffffff00;
+}
+
+.text-section-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.text-section-card {
+    padding: $edge-padding-y $edge-padding-x;
+    width: calc(100% - 2 * $edge-padding-x);
+}
+
+.containers {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.containers > * {
+    padding: $inner-padding-y $inner-padding-x;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    max-height: 80vh;
+    max-width: 33vw;
+}
+
+.right-align-image {
+    flex-direction: row-reverse;
+}
+
+.left-align-image {
+    flex-direction: row;
+}
+
+.bottom-align-image {
+    flex-direction: column-reverse;
+}
+
+.top-align-image {
+    flex-direction: column;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section-break {
+    background-color: none;
+    height: 20px;
+}
+
+.title {
+    white-space: pre-line;
+    width: 100%;
+    font-size: xx-large;
+    margin: 0px;
+}
+
+.content {
+    white-space: pre-line;
+    width: 100%;
+    font-size: large;
+    line-height: 25px;
+    margin: 0px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
