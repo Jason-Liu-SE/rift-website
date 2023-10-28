@@ -13,6 +13,7 @@ import { PageTemplateDirective } from './directives/page-template.directive';
 import { MatButtonModule } from '@angular/material/button';
 import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
 import { TextSectionCardComponent } from './components/section-card/section-card.component';
+import { CaptionCardComponent } from './components/caption-card/caption-card.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { TextSectionCardComponent } from './components/section-card/section-card
         ContactComponent,
         PageTemplateDirective,
         WelcomeCardComponent,
-        TextSectionCardComponent
+        TextSectionCardComponent,
+        CaptionCardComponent
     ],
     imports: [
         BrowserModule,

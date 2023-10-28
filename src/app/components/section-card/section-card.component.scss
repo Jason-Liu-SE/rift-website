@@ -6,17 +6,17 @@ $inner-padding-x: 20px;
 $inner-padding-y: 20px;
 
 .dark-background {
-    color: $color-light-text;
+    color: $colour-light-text;
     background-color: $colour-dark-background;
 }
 
 .light-background {
-    color: $color-dark-text;
+    color: $colour-dark-text;
     background-color: $colour-light-background;
 }
 
 .empty-background {
-    color: $color-dark-text;
+    color: $colour-dark-text;
     background-color: #ffffff00;
 }
 
