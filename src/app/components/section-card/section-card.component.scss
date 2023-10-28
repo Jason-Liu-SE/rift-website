@@ -1,4 +1,5 @@
 @import '../../../theme-colours.scss';
+@import '../../../font-sizes.scss';
 
 $edge-padding-x: 15%;
 $edge-padding-y: 5%;
@@ -89,14 +90,14 @@ $inner-padding-y: 20px;
 .title {
     white-space: pre-line;
     width: 100%;
-    font-size: xx-large;
+    font-size: $font-size-large;
     margin: 0px;
 }
 
 .content {
     white-space: pre-line;
     width: 100%;
-    font-size: large;
+    font-size: $font-size-medium;
     line-height: 25px;
     margin: 0px;
 }

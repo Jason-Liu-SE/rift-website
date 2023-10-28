@@ -1,4 +1,5 @@
 @import '../../../theme-colours.scss';
+@import '../../../font-sizes.scss';
 
 .background-image-card {
     height: 300px;
@@ -28,10 +29,10 @@
 
 .title {
     font-weight: 700;
-    font-size: xx-large;
+    font-size: $font-size-x-large;
     margin-bottom: 10px;
 }
 
 .description {
-    font-size: large;
+    font-size: $font-size-small;
 }

@@ -1,9 +1,9 @@
 @import '../../../theme-colours.scss';
+@import '../../../font-sizes.scss';
 
 * {
     text-align: center;
     color: #343434;
-    font-size: 16px;
 }
 
 .contact-section {
@@ -16,12 +16,13 @@
 
 .title {
     font-weight: 900;
-    font-size: 50px;
+    font-size: $font-size-xx-large;
     height: 35px;
 }
 
 .description {
     padding-top: 5px;
+    font-size: $font-size-medium;
 }
 
 .horizontal-separator {
@@ -33,4 +34,5 @@
 
 .email {
     margin: 0;
+    font-size: $font-size-small;
 }
