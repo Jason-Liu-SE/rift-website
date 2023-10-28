@@ -15,8 +15,6 @@ import { WelcomeCardComponent } from './components/welcome-card/welcome-card.com
 import { TextSectionCardComponent } from './components/section-card/section-card.component';
 import { CaptionCardComponent } from './components/caption-card/caption-card.component';
 import { CollectionCardComponent } from './components/gallery/collection-section/collection-section.component';
-import { CaptionSectionComponent } from './components/caption-section/caption-section.component';
-
 @NgModule({
     declarations: [
         routingComponents,
@@ -30,8 +28,7 @@ import { CaptionSectionComponent } from './components/caption-section/caption-se
         WelcomeCardComponent,
         TextSectionCardComponent,
         CaptionCardComponent,
-        CollectionCardComponent,
-        CaptionSectionComponent
+        CollectionCardComponent
     ],
     imports: [
         BrowserModule,
