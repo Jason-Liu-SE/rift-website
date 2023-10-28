@@ -31,7 +31,7 @@ const routes: Routes = [
         path: 'gallery',
         component: PageTemplateComponent,
         title: 'The Rift - Gallery',
-        data: { component: GalleryPageComponent }
+        data: { component: GalleryPageComponent, showContactSection: false }
     },
     {
         path: 'map',
@@ -55,7 +55,11 @@ const routes: Routes = [
         path: '**',
         component: PageTemplateComponent,
         title: 'The Rift - Error 404',
-        data: { component: ErrorPageComponent, isTransparent: false }
+        data: {
+            component: ErrorPageComponent,
+            isTransparent: false,
+            showContactSection: false
+        }
     }
 ];
 

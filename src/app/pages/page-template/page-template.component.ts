@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Type } from '@angular/core';
+import { Component, OnInit, ViewChild, Type, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageTemplateDirective } from 'src/app/directives/page-template.directive';
 import { PageTemplateType } from './page-template-type.component';
@@ -9,6 +9,7 @@ import { PageTemplateType } from './page-template-type.component';
     styleUrls: ['./page-template.component.scss']
 })
 export class PageTemplateComponent implements OnInit {
+    public showContactSection: boolean;
     public mainComponent: Type<any>;
     public isTransparent!: boolean;
 
@@ -16,11 +17,16 @@ export class PageTemplateComponent implements OnInit {
     appPageTemplateHost!: PageTemplateDirective;
 
     constructor(private route: ActivatedRoute) {
+        // setting values from the passed URL data
         const isTransparentProp = this.route.snapshot.data['isTransparent'];
+        const showContactSectionProp =
+            this.route.snapshot.data['showContactSection'];
 
         this.isTransparent =
             isTransparentProp == null ? true : isTransparentProp;
         this.mainComponent = this.route.snapshot.data['component'];
+        this.showContactSection =
+            showContactSectionProp == null ? true : showContactSectionProp;
     }
 
     // displaying the passed component dynamically
