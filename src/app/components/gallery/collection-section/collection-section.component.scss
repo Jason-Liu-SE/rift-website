@@ -2,7 +2,7 @@
 @import '../../../../theme-colours.scss';
 
 $collection-card-width: 600px;
-$hover-animation-duration: 0.2s;
+$hover-animation-duration: 0.3s;
 $hover-animation-text-offset: -20px;
 
 .collection-section {
@@ -85,7 +85,7 @@ $hover-animation-text-offset: -20px;
 }
 
 .collection-card:hover .title {
-    animation: title-hover-effect $hover-animation-duration linear forwards;
+    animation: title-hover-effect $hover-animation-duration ease forwards;
 }
 
 .description {
@@ -98,7 +98,7 @@ $hover-animation-text-offset: -20px;
 }
 
 .collection-card:hover .description {
-    animation: slide-in-from-below $hover-animation-duration linear forwards;
+    animation: slide-in-from-below $hover-animation-duration ease forwards;
 }
 
 .top-bar {
@@ -110,7 +110,7 @@ $hover-animation-text-offset: -20px;
 }
 
 .collection-card:hover .top-bar {
-    animation: slide-in-from-right $hover-animation-duration linear forwards;
+    animation: slide-in-from-right $hover-animation-duration ease forwards;
 }
 
 .bottom-bar {
@@ -122,7 +122,7 @@ $hover-animation-text-offset: -20px;
 }
 
 .collection-card:hover .bottom-bar {
-    animation: slide-in-from-left $hover-animation-duration linear forwards;
+    animation: slide-in-from-left $hover-animation-duration ease forwards;
 }
 
 @keyframes title-hover-effect {
