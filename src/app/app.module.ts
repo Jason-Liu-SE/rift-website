@@ -14,7 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
 import { TextSectionCardComponent } from './components/section-card/section-card.component';
 import { CaptionCardComponent } from './components/caption-card/caption-card.component';
-import { CollectionCardComponent } from './components/gallery/collection-section/collection-section.component';
+import { CollectionSectionComponent } from './components/gallery/collection-section/collection-section.component';
 @NgModule({
     declarations: [
         routingComponents,
@@ -28,7 +28,7 @@ import { CollectionCardComponent } from './components/gallery/collection-section
         WelcomeCardComponent,
         TextSectionCardComponent,
         CaptionCardComponent,
-        CollectionCardComponent
+        CollectionSectionComponent
     ],
     imports: [
         BrowserModule,
