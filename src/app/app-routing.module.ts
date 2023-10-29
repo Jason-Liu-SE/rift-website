@@ -8,7 +8,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { PageTemplateComponent } from './pages/page-template/page-template.component';
 import { DownloadsPageComponent } from './pages/downloads-page/downloads-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
-import { SeasonOnePageComponent } from './pages/gallery-page/season-one-page/season-one-page.component';
+import { ImageShowcasePageComponent } from './pages/image-showcase-page/image-showcase-page.component';
 
 const routes: Routes = [
     {
@@ -38,7 +38,10 @@ const routes: Routes = [
         path: 'gallery/season-1',
         component: PageTemplateComponent,
         title: 'The Rift - Gallery: Season 1',
-        data: { component: SeasonOnePageComponent, showContactSection: false }
+        data: {
+            component: ImageShowcasePageComponent,
+            showContactSection: false
+        }
     },
     {
         path: 'map',
@@ -84,7 +87,7 @@ export const routingComponents = [
     AboutPageComponent,
     DownloadsPageComponent,
     ErrorPageComponent,
-    SeasonOnePageComponent
+    ImageShowcasePageComponent
 ];
 
 imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })];
