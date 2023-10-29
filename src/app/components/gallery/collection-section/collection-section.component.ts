@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './collection-section.component.html',
     styleUrls: ['./collection-section.component.scss']
 })
-export class CollectionCardComponent {}
+export class CollectionSectionComponent {}

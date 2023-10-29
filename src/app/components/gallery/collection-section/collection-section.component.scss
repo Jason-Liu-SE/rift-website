@@ -1,4 +1,9 @@
+@import '../../../../font-sizes.scss';
+@import '../../../../theme-colours.scss';
+
 $collection-card-width: 600px;
+$hover-animation-duration: 0.2s;
+$hover-animation-text-offset: -20px;
 
 .collection-section {
     display: flex;
@@ -19,21 +24,353 @@ $collection-card-width: 600px;
     justify-content: center;
 }
 
-.collection-card {
+.grid-item {
     grid-column: span 1;
     grid-row: span 1;
+}
+
+.sub-grid {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+}
+
+.collection-card {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px;
-    padding: 10px;
     overflow: hidden;
-    background-color: white;
-    filter: drop-shadow(2px 2px 5px #00000029);
-    transition: transform 0.05s, filter 0.05s;
+    transition: scale $hover-animation-duration,
+        filter $hover-animation-duration, border $hover-animation-duration;
+    filter: drop-shadow(2px 2px 5px #00000054);
 }
 
 .collection-card:hover {
-    transform: translate(-5px, -5px);
-    filter: drop-shadow(3px 3px 5px #0000004d);
+    scale: 1.02;
+    border: 2px solid black;
     cursor: pointer;
+    filter: drop-shadow(2px 2px 5px #000000);
+}
+
+.background-content {
+    grid-area: 1 / 1 / 2 / 2;
+    background-position: center;
+    background-size: cover;
+    transition: filter $hover-animation-duration;
+}
+
+.collection-card:hover .background-content {
+    filter: brightness(0.7) saturate(0);
+}
+
+.overlay-content {
+    grid-area: 1 / 1 / 2 / 2;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(rgba(0, 0, 0, 0.209), rgba(0, 0, 0, 0.471));
+}
+
+.title {
+    font-size: $font-size-x-large;
+    line-height: $font-size-x-large;
+    font-weight: 600;
+    color: $colour-miami-pink;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin: 0;
+    text-shadow: none;
+    background-image: $colour-galactic-purple;
+}
+
+.collection-card:hover .title {
+    animation: title-hover-effect $hover-animation-duration linear forwards;
+}
+
+.description {
+    font-size: $font-size-medium;
+    line-height: $font-size-medium;
+    font-weight: 500;
+    margin: 0;
+    color: $colour-light-grey;
+    filter: opacity(0);
+}
+
+.collection-card:hover .description {
+    animation: slide-in-from-below $hover-animation-duration linear forwards;
+}
+
+.top-bar {
+    border: 1px solid $colour-secondary;
+    border-radius: 5px;
+    width: calc($collection-card-width / 2);
+    margin-bottom: 20px;
+    filter: opacity(0);
+}
+
+.collection-card:hover .top-bar {
+    animation: slide-in-from-right $hover-animation-duration linear forwards;
+}
+
+.bottom-bar {
+    border: 1px solid $colour-secondary;
+    border-radius: 5px;
+    width: calc($collection-card-width / 2);
+    margin-top: 20px;
+    filter: opacity(0);
+}
+
+.collection-card:hover .bottom-bar {
+    animation: slide-in-from-left $hover-animation-duration linear forwards;
+}
+
+@keyframes title-hover-effect {
+    0% {
+        text-shadow: none;
+        background-color: $colour-miami-pink;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    10% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    20% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    30% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    40% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    50% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    60% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    70% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-miami-pink,
+            $colour-miami-pink,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    80% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-miami-pink,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    90% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-galactic-purple,
+            $colour-miami-pink
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    100% {
+        text-shadow: none;
+        background-color: $colour-galactic-purple;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        transform: translate(0, $hover-animation-text-offset);
+    }
+}
+
+@keyframes slide-in-from-right {
+    0% {
+        filter: opacity(0);
+        transform: translate(
+            calc($collection-card-width - 50%),
+            $hover-animation-text-offset
+        );
+    }
+    70% {
+        filter: opacity(0);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translate(0, $hover-animation-text-offset);
+    }
+}
+
+@keyframes slide-in-from-left {
+    0% {
+        filter: opacity(0);
+        transform: translate(
+            calc(-1 * $collection-card-width + 50%),
+            $hover-animation-text-offset
+        );
+    }
+    70% {
+        filter: opacity(0);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translate(0, $hover-animation-text-offset);
+    }
+}
+
+@keyframes slide-in-from-below {
+    0% {
+        filter: opacity(0);
+    }
+    70% {
+        filter: opacity(0);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translate(0, $hover-animation-text-offset);
+    }
 }
