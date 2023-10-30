@@ -1,0 +1,23 @@
+.image-showcase-section {
+    padding: 50px;
+}
+
+.caption-card-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+}
+
+.caption-card {
+    flex: 1 1 auto;
+    height: 300px;
+    overflow: hidden;
+    transition: border-radius 0.2s ease, scale 0.2s ease;
+}
+
+.caption-card:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 2px solid rgba(0, 0, 0, 0.352);
+}
