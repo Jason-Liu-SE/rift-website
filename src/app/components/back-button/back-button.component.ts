@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./back-button.component.scss']
 })
 export class BackButtonComponent {
-    @Input({ alias: 'address', required: true }) public link!: string;
+    @Input({ alias: 'destination', required: true }) public link!: string;
 }
