@@ -1,9 +1,12 @@
 .image-showcase-section {
-    padding: 50px;
+    padding: 40px 50px;
 }
 
 .caption-card-gallery {
+    padding: 0;
+    margin: 20px 0;
     display: flex;
+
     flex-wrap: wrap;
     list-style: none;
     gap: 10px;

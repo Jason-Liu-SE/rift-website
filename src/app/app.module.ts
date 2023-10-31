@@ -16,6 +16,7 @@ import { TextSectionCardComponent } from './components/section-card/section-card
 import { CaptionCardComponent } from './components/caption-card/caption-card.component';
 import { CollectionSectionComponent } from './components/gallery/collection-section/collection-section.component';
 import { ImageShowcaseSectionComponent } from './components/image-showcase-section/image-showcase-section.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { ImageShowcaseSectionComponent } from './components/image-showcase-secti
         TextSectionCardComponent,
         CaptionCardComponent,
         CollectionSectionComponent,
-        ImageShowcaseSectionComponent
+        ImageShowcaseSectionComponent,
+        BackButtonComponent
     ],
     imports: [
         BrowserModule,
