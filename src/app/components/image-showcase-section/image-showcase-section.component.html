@@ -9,6 +9,17 @@
             />
         </li>
     </ul>
+    <mat-paginator
+        #paginator
+        class="paginator"
+        (page)="handlePageEvent($event)"
+        [length]="length"
+        [pageSize]="pageSize"
+        [showFirstLastButtons]="true"
+        [pageIndex]="pageIndex"
+        aria-label="Select page"
+    >
+    </mat-paginator>
 </div>
 
 <!-- https://material.angular.io/components/paginator/overview -->

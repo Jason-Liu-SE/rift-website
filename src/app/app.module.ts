@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -10,7 +13,6 @@ import { PageTemplateComponent } from './pages/page-template/page-template.compo
 import { BackgroundImageCardComponent } from './components/background-image-card/background-image-card.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PageTemplateDirective } from './directives/page-template.directive';
-import { MatButtonModule } from '@angular/material/button';
 import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
 import { TextSectionCardComponent } from './components/section-card/section-card.component';
 import { CaptionCardComponent } from './components/caption-card/caption-card.component';
@@ -40,7 +42,8 @@ import { GalleryProviderService } from './services/gallery-provider.service';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        MatButtonModule
+        MatButtonModule,
+        MatPaginatorModule
     ],
     providers: [GalleryProviderService],
     bootstrap: [AppComponent]
