@@ -17,6 +17,7 @@ import { CaptionCardComponent } from './components/caption-card/caption-card.com
 import { CollectionSectionComponent } from './components/gallery/collection-section/collection-section.component';
 import { ImageShowcaseSectionComponent } from './components/image-showcase-section/image-showcase-section.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
+import { GalleryProviderService } from './services/gallery-provider.service';
 
 @NgModule({
     declarations: [
@@ -41,7 +42,7 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
         BrowserAnimationsModule,
         MatButtonModule
     ],
-    providers: [],
+    providers: [GalleryProviderService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
