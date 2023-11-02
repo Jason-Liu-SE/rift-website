@@ -1,3 +1,5 @@
+@import '../../../theme-colours.scss';
+
 .image-showcase-section {
     padding: 40px 50px;
 }
@@ -52,4 +54,16 @@
     position: absolute;
     top: 3%;
     right: 3%;
+    border-radius: 10px;
+    background-color: rgba($colour-blue-grey, 0.5);
+    color: $colour-light-text;
+}
+
+.exit-button:hover {
+    color: $colour-light-text;
+    background-color: red;
+}
+
+.exit-button:hover > .exit-icon {
+    transform: rotate(90deg);
 }
