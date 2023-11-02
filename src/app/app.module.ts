@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -45,7 +46,8 @@ import { ImageSlideshowComponent } from './components/image-slideshow/image-slid
         AppRoutingModule,
         BrowserAnimationsModule,
         MatButtonModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatIconModule
     ],
     providers: [GalleryProviderService],
     bootstrap: [AppComponent]
