@@ -11,7 +11,7 @@ export class ImageShowcaseSectionComponent {
     @Input({ alias: 'collection', required: true })
     public collectionName!: string;
 
-    public isPopupVisible: boolean = false;
+    public isPopUpVisible: boolean = false;
     public images: string[];
     public length = 50;
     public pageSize = 20;
@@ -40,6 +40,10 @@ export class ImageShowcaseSectionComponent {
         const imageUrl: string | null = target.getAttribute('image-url');
 
         this.popUpImage = imageUrl ? (imageUrl as string) : '';
-        this.isPopupVisible = true;
+        this.isPopUpVisible = true;
+    }
+
+    public handleClose(): void {
+        this.isPopUpVisible = false;
     }
 }

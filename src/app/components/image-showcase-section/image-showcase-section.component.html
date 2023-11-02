@@ -22,11 +22,14 @@
         aria-label="Select page"
     >
     </mat-paginator>
-    <div class="image-pop-up" *ngIf="isPopupVisible">
+    <div class="image-pop-up" *ngIf="isPopUpVisible">
         <app-image-slideshow
             [src]="popUpImage"
             [images]="getImages(collectionName)"
             [startingIndex]="0"
         />
+        <button class="exit-button" mat-fab extended (click)="handleClose()">
+            <mat-icon>close</mat-icon>Close
+        </button>
     </div>
 </div>
