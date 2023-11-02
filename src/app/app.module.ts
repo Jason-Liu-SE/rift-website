@@ -20,6 +20,7 @@ import { CollectionSectionComponent } from './components/gallery/collection-sect
 import { ImageShowcaseSectionComponent } from './components/image-showcase-section/image-showcase-section.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { GalleryProviderService } from './services/gallery-provider.service';
+import { ImageSlideshowComponent } from './components/image-slideshow/image-slideshow.component';
 
 @NgModule({
     declarations: [
@@ -36,7 +37,8 @@ import { GalleryProviderService } from './services/gallery-provider.service';
         CaptionCardComponent,
         CollectionSectionComponent,
         ImageShowcaseSectionComponent,
-        BackButtonComponent
+        BackButtonComponent,
+        ImageSlideshowComponent
     ],
     imports: [
         BrowserModule,

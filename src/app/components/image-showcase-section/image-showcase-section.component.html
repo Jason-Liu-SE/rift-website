@@ -2,11 +2,13 @@
     <app-back-button [destination]="'/gallery'" />
     <ul class="caption-card-gallery">
         <li class="caption-card" *ngFor="let image of images; index as i">
-            <app-caption-card
-                [src]="image"
-                [caption]="i.toString()"
-                [caption-visibility]="'hover'"
-            />
+            <button class="image-button" (click)="handleImageClick($event)">
+                <app-caption-card
+                    [src]="image"
+                    [caption]="i.toString()"
+                    [caption-visibility]="'hover'"
+                />
+            </button>
         </li>
     </ul>
     <mat-paginator
@@ -20,6 +22,11 @@
         aria-label="Select page"
     >
     </mat-paginator>
+    <div class="image-pop-up" *ngIf="isPopupVisible">
+        <app-image-slideshow
+            [src]="popUpImage"
+            [images]="getImages(collectionName)"
+            [startingIndex]="0"
+        />
+    </div>
 </div>
-
-<!-- https://material.angular.io/components/paginator/overview -->
