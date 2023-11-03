@@ -1,0 +1,59 @@
+@import '../../../../font-sizes.scss';
+
+$news-container-margin: 20px;
+$news-item-padding: 15px;
+
+.news-display {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.news-container {
+    margin: 10px;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+    list-style: none;
+}
+
+.news-container > .news-item {
+    margin: $news-container-margin 0;
+}
+
+.news-item {
+    width: calc(100% - 2 * $news-item-padding);
+    border: 1px solid rgba(0, 0, 0, 0.124);
+    border-radius: 5px;
+    padding: $news-item-padding;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.title,
+.date,
+.content {
+    white-space: pre-line;
+}
+
+.title {
+    margin: 0;
+    font-weight: 700;
+}
+
+.date {
+    font-size: $font-size-small;
+}
+
+.separator {
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.124);
+    color: rgba(0, 0, 0, 0.124);
+    border-radius: 10px;
+}
+
+.content {
+    margin: 0;
+    line-height: calc($font-size-medium + 0.2em);
+    font-size: $font-size-medium;
+}
