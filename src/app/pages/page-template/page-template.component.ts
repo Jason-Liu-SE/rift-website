@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Type, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Type } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageTemplateDirective } from 'src/app/directives/page-template.directive';
 import { PageTemplateType } from './page-template-type.component';
@@ -26,7 +26,7 @@ export class PageTemplateComponent implements OnInit {
             isTransparentProp == null ? true : isTransparentProp;
         this.mainComponent = this.route.snapshot.data['component'];
         this.showContactSection =
-            showContactSectionProp == null ? true : showContactSectionProp;
+            showContactSectionProp == null ? false : showContactSectionProp;
     }
 
     // displaying the passed component dynamically

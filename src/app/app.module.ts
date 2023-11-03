@@ -22,6 +22,7 @@ import { ImageShowcaseSectionComponent } from './components/image-showcase-secti
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { GalleryProviderService } from './services/gallery-provider.service';
 import { ImageSlideshowComponent } from './components/image-slideshow/image-slideshow.component';
+import { NewsDisplayComponent } from './components/news/news-display/news-display.component';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import { ImageSlideshowComponent } from './components/image-slideshow/image-slid
         CollectionSectionComponent,
         ImageShowcaseSectionComponent,
         BackButtonComponent,
-        ImageSlideshowComponent
+        ImageSlideshowComponent,
+        NewsDisplayComponent
     ],
     imports: [
         BrowserModule,

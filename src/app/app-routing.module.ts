@@ -9,6 +9,7 @@ import { PageTemplateComponent } from './pages/page-template/page-template.compo
 import { DownloadsPageComponent } from './pages/downloads-page/downloads-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ImageShowcasePageComponent } from './pages/image-showcase-page/image-showcase-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 const routes: Routes = [
     {
@@ -20,7 +21,7 @@ const routes: Routes = [
         path: 'home',
         component: PageTemplateComponent,
         title: 'The Rift - Home',
-        data: { component: HomePageComponent }
+        data: { component: HomePageComponent, showContactSection: true }
     },
     {
         path: 'news',
@@ -32,15 +33,14 @@ const routes: Routes = [
         path: 'gallery',
         component: PageTemplateComponent,
         title: 'The Rift - Gallery',
-        data: { component: GalleryPageComponent, showContactSection: false }
+        data: { component: GalleryPageComponent }
     },
     {
         path: 'gallery/season-1',
         component: PageTemplateComponent,
         title: 'The Rift - Gallery: Season 1',
         data: {
-            component: ImageShowcasePageComponent,
-            showContactSection: false
+            component: ImageShowcasePageComponent
         }
     },
     {
@@ -60,6 +60,12 @@ const routes: Routes = [
         component: PageTemplateComponent,
         title: 'The Rift - Downloads',
         data: { component: DownloadsPageComponent }
+    },
+    {
+        path: 'contact',
+        component: PageTemplateComponent,
+        title: 'The Rift - Contact Us',
+        data: { component: ContactPageComponent }
     },
     {
         path: '**',
@@ -87,7 +93,8 @@ export const routingComponents = [
     AboutPageComponent,
     DownloadsPageComponent,
     ErrorPageComponent,
-    ImageShowcasePageComponent
+    ImageShowcasePageComponent,
+    ContactPageComponent
 ];
 
 imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })];
