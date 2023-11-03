@@ -27,7 +27,7 @@ const routes: Routes = [
         path: 'news',
         component: PageTemplateComponent,
         title: 'The Rift - News',
-        data: { component: NewsPageComponent }
+        data: { component: NewsPageComponent, isTransparent: false }
     },
     {
         path: 'gallery',
@@ -47,7 +47,7 @@ const routes: Routes = [
         path: 'map',
         component: PageTemplateComponent,
         title: 'The Rift - Map',
-        data: { component: MapPageComponent }
+        data: { component: MapPageComponent, isTransparent: false }
     },
     {
         path: 'about',
@@ -80,7 +80,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [
+        RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })
+    ],
     exports: [RouterModule]
 })
 export class AppRoutingModule {}
