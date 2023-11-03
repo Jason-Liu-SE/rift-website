@@ -1,67 +1,90 @@
 <div class="rift-navbar" *ngIf="!isTransparent"></div>
-<nav class="rift-navbar always-visible {{ isTransparent ? '' : 'opaque' }}">
-    <ul class="menu-links">
-        <li class="link-container">
-            <a class="nav-button" routerLink="/home">
-                <img
-                    class="rift-logo"
-                    src="../../assets/navbar/rift-logo.png"
-                    alt="The Right logo"
-                />
-            </a>
-        </li>
-        <li class="link-container">
-            <a
-                class="nav-link"
-                routerLink="/home"
-                routerLinkActive="link-active"
-                ><p>Home</p></a
-            >
-        </li>
-        <li class="link-container">
-            <a
-                class="nav-link"
-                routerLink="/news"
-                routerLinkActive="link-active"
-                ><p>News</p></a
-            >
-        </li>
-        <li class="link-container">
-            <a
-                class="nav-link"
-                routerLink="/gallery"
-                routerLinkActive="link-active"
-                ><p>Gallery</p></a
-            >
-        </li>
-        <li class="link-container">
-            <a class="nav-link" routerLink="/map" routerLinkActive="link-active"
-                ><p>Map</p></a
-            >
-        </li>
-        <li class="link-container">
-            <a
-                class="nav-link"
-                routerLink="/downloads"
-                routerLinkActive="link-active"
-                ><p>Downloads</p></a
-            >
-        </li>
-    </ul>
-    <ul class="menu-links"></ul>
-    <ul class="menu-links">
-        <li class="link-container">
-            <a class="nav-link" (click)="handlePageScroll('contact-section')"
-                ><p>Contact</p></a
-            >
-        </li>
-        <li class="link-container">
-            <a
-                class="nav-link"
-                routerLink="/about"
-                routerLinkActive="link-active"
-                ><p>About</p></a
-            >
-        </li>
-    </ul>
-</nav>
+<div
+    class="rift-navbar-wrapper always-visible {{
+        isTransparent ? '' : 'opaque'
+    }}"
+>
+    <nav class="rift-navbar">
+        <ul class="menu-links left-align">
+            <li class="link-container">
+                <a class="nav-button" routerLink="/home">
+                    <img
+                        class="rift-logo"
+                        src="../../assets/navbar/rift-logo.png"
+                        alt="The Right logo"
+                    />
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-links center-align">
+            <li class="link-container">
+                <a
+                    class="nav-link"
+                    routerLink="/home"
+                    routerLinkActive="link-active"
+                    ><p>Home</p></a
+                >
+            </li>
+            <li class="link-container">
+                <a
+                    class="nav-link"
+                    routerLink="/news"
+                    routerLinkActive="link-active"
+                    ><p>News</p></a
+                >
+            </li>
+            <li class="link-container">
+                <a
+                    class="nav-link"
+                    routerLink="/gallery"
+                    routerLinkActive="link-active"
+                    ><p>Gallery</p></a
+                >
+            </li>
+            <li class="link-container">
+                <a
+                    class="nav-link"
+                    routerLink="/map"
+                    routerLinkActive="link-active"
+                    ><p>Map</p></a
+                >
+            </li>
+            <li class="link-container">
+                <a
+                    class="nav-link"
+                    routerLink="/downloads"
+                    routerLinkActive="link-active"
+                    ><p>Downloads</p></a
+                >
+            </li>
+
+            <li class="link-container">
+                <a
+                    class="nav-link"
+                    routerLink="/about"
+                    routerLinkActive="link-active"
+                    ><p>About</p></a
+                >
+            </li>
+            <li class="link-container">
+                <a
+                    class="nav-link"
+                    (click)="handlePageScroll('contact-section')"
+                    ><p>Contact</p></a
+                >
+            </li>
+        </ul>
+        <ul class="menu-links right-align">
+            <li class="link-container">
+                <button
+                    class="join-button"
+                    mat-flat-button
+                    disableRipple
+                    color="primary"
+                >
+                    Join
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
