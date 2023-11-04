@@ -5,11 +5,20 @@
         [title]="'Downloads'"
         [desc]="'Check out the previous Rift seasons'"
     ></app-background-image-card>
-    <app-section-card
-        [backgroundType]="'light'"
-        [title]="'Worlds'"
-        [titlePosition]="'left'"
-        [contentPosition]="'left'"
-        ><app-download-card></app-download-card
-    ></app-section-card>
+    <div class="downloads-container">
+        <app-section-card
+            *ngFor="let collection of collections"
+            [backgroundType]="'light'"
+            [title]="'Worlds'"
+            [titlePosition]="'left'"
+            [contentPosition]="'left'"
+            [paddingY]="false"
+        >
+            <div class="download-section">
+                <app-download-card></app-download-card>
+                <app-download-card></app-download-card>
+                <app-download-card></app-download-card>
+            </div>
+        </app-section-card>
+    </div>
 </div>

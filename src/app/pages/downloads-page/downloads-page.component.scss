@@ -1,0 +1,12 @@
+.downloads-container {
+    padding: 50px 0;
+}
+
+.download-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.download-section > * {
+    margin: 10px 0;
+}
