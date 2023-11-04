@@ -1,5 +1,33 @@
+.download-card-wrapper {
+    position: relative;
+    overflow: hidden;
+    color: blue;
+}
+
 .download-card {
-    background-color: red;
-    height: 200px;
+    background-color: white;
+    background-image: url('../../../assets/home/1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    height: max(200px, fit-content);
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.download-card > * {
+    position: relative;
+    z-index: 10;
+}
+
+.download-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(120deg, rgb(0, 0, 0) 30%, transparent 45%);
     border-radius: 5px;
 }
