@@ -23,6 +23,7 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
 import { GalleryProviderService } from './services/gallery-provider.service';
 import { ImageSlideshowComponent } from './components/image-slideshow/image-slideshow.component';
 import { NewsDisplayComponent } from './components/news/news-display/news-display.component';
+import { DownloadCardComponent } from './components/download-card/download-card.component';
 
 @NgModule({
     declarations: [
@@ -41,7 +42,8 @@ import { NewsDisplayComponent } from './components/news/news-display/news-displa
         ImageShowcaseSectionComponent,
         BackButtonComponent,
         ImageSlideshowComponent,
-        NewsDisplayComponent
+        NewsDisplayComponent,
+        DownloadCardComponent
     ],
     imports: [
         BrowserModule,
