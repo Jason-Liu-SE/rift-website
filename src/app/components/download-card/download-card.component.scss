@@ -28,6 +28,15 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: linear-gradient(120deg, rgb(0, 0, 0) 30%, transparent 45%);
-    border-radius: 5px;
+    // background: linear-gradient(
+    //     120deg,
+    //     rgb(0, 0, 0) 30%,
+    //     rgba(0, 0, 0, 0.24) 45%
+    // );
+    // border-radius: 5px;
+    background: radial-gradient(
+        circle farthest-side at bottom right,
+        rgba(0, 0, 0, 0.24) 60%,
+        rgba(0, 0, 0, 1) 75%
+    );
 }
