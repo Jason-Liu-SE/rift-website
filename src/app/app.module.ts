@@ -15,7 +15,7 @@ import { BackgroundImageCardComponent } from './components/background-image-card
 import { ContactComponent } from './components/contact/contact.component';
 import { PageTemplateDirective } from './directives/page-template.directive';
 import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
-import { TextSectionCardComponent } from './components/section-card/section-card.component';
+import { SectionCardComponent } from './components/section-card/section-card.component';
 import { CaptionCardComponent } from './components/caption-card/caption-card.component';
 import { CollectionSectionComponent } from './components/gallery/collection-section/collection-section.component';
 import { ImageShowcaseSectionComponent } from './components/image-showcase-section/image-showcase-section.component';
@@ -35,7 +35,7 @@ import { NewsDisplayComponent } from './components/news/news-display/news-displa
         ContactComponent,
         PageTemplateDirective,
         WelcomeCardComponent,
-        TextSectionCardComponent,
+        SectionCardComponent,
         CaptionCardComponent,
         CollectionSectionComponent,
         ImageShowcaseSectionComponent,

@@ -5,13 +5,14 @@ import { Component, Input, OnInit } from '@angular/core';
     templateUrl: './section-card.component.html',
     styleUrls: ['./section-card.component.scss']
 })
-export class TextSectionCardComponent implements OnInit {
+export class SectionCardComponent implements OnInit {
     // optional properties
     @Input() public title: string = '';
     @Input() public content: string = '';
     @Input('img') public imageUrl: string = '';
     @Input() public backgroundType!: string; // can be 'none', 'dark', or 'light' - default is 'light'
     @Input() public titlePosition!: string; // can be 'left', 'right', or 'center' - default is 'left'
+    @Input() public contentPosition!: string; // can be 'left', 'right', or 'center' - default is 'left'
     @Input('imgPos') public imagePosition!: string; // can be 'left', 'right', 'top', or 'bottom' - default is 'left'
     @Input('paddingX') public sectionPaddingX: boolean = true;
     @Input('paddingY') public sectionPaddingY: boolean = true;
@@ -19,6 +20,7 @@ export class TextSectionCardComponent implements OnInit {
     public titlePositionClass!: string;
     public backgroundTypeClass!: string;
     public imagePositionClass!: string;
+    public contentPositionClass!: string;
     public showTitle: boolean = true;
     public showContent: boolean = true;
     public showImage: boolean = true;
@@ -61,6 +63,18 @@ export class TextSectionCardComponent implements OnInit {
                 break;
             default:
                 this.imagePositionClass = 'left-align-image';
+        }
+
+        // parsing the content location
+        switch (this.contentPosition) {
+            case 'right':
+                this.contentPositionClass = 'right-align';
+                break;
+            case 'center':
+                this.contentPositionClass = 'center-align';
+                break;
+            default:
+                this.contentPositionClass = 'left-align';
         }
 
         // parsing content information

@@ -1,5 +1,5 @@
 <div
-    class="text-section-card {{ backgroundTypeClass }} {{
+    class="section-card {{ backgroundTypeClass }} {{
         sectionPaddingX ? 'padding-x' : ''
     }} {{ sectionPaddingY ? 'padding-y' : '' }}"
 >
@@ -7,14 +7,17 @@
         <div class="image-container" *ngIf="showImage">
             <img src="{{ imageUrl }}" class="image" />
         </div>
-        <div class="text-container" *ngIf="showTitle || showContent">
+        <div class="main-container" *ngIf="showTitle || showContent">
             <h2 class="title {{ titlePositionClass }}" *ngIf="showTitle">
                 {{ title }}
             </h2>
             <div class="section-break" *ngIf="showTitle && showContent"></div>
-            <p class="content {{ titlePositionClass }}" *ngIf="showContent">
+            <p class="content {{ contentPositionClass }}" *ngIf="showContent">
                 {{ content }}
             </p>
+            <div class="dynamic-content {{ contentPositionClass }}">
+                <ng-content></ng-content>
+            </div>
         </div>
     </div>
 </div>

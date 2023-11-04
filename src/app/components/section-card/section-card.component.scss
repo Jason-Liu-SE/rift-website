@@ -21,26 +21,26 @@ $inner-padding-y: 20px;
     background-color: #ffffff00;
 }
 
-.text-section-card {
+.section-card {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-.text-section-card.padding-x {
+.section-card.padding-x {
     width: calc(100% - 2 * $edge-padding-x);
     padding-left: $edge-padding-x;
     padding-right: $edge-padding-x;
 }
 
-.text-section-card.padding-y {
+.section-card.padding-y {
     padding-top: $edge-padding-y;
     padding-bottom: $edge-padding-y;
 }
 
 .containers {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
     width: 100%;
@@ -78,7 +78,7 @@ $inner-padding-y: 20px;
     flex-direction: column;
 }
 
-.text-container {
+.main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,6 +104,10 @@ $inner-padding-y: 20px;
     font-size: $font-size-medium;
     line-height: 25px;
     margin: 0px;
+}
+
+.dynamic-content {
+    width: 100%;
 }
 
 .center-align {
