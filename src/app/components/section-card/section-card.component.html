@@ -1,22 +1,30 @@
-<div
-    class="section-card {{ backgroundTypeClass }} {{
-        sectionPaddingX ? 'padding-x' : ''
-    }} {{ sectionPaddingY ? 'padding-y' : '' }}"
->
-    <div class="containers {{ imagePositionClass }}">
-        <div class="image-container" *ngIf="showImage">
-            <img src="{{ imageUrl }}" class="image" />
-        </div>
-        <div class="main-container" *ngIf="showTitle || showContent">
-            <h2 class="title {{ titlePositionClass }}" *ngIf="showTitle">
-                {{ title }}
-            </h2>
-            <div class="section-break" *ngIf="showTitle && showContent"></div>
-            <p class="content {{ contentPositionClass }}" *ngIf="showContent">
-                {{ content }}
-            </p>
-            <div class="dynamic-content {{ contentPositionClass }}">
-                <ng-content></ng-content>
+<div class="section-card-wrapper {{ backgroundTypeClass }}">
+    <div
+        class="section-card {{ sectionPaddingX ? 'padding-x' : '' }} {{
+            sectionPaddingY ? 'padding-y' : ''
+        }}"
+    >
+        <div class="containers {{ imagePositionClass }}">
+            <div class="image-container" *ngIf="showImage">
+                <img src="{{ imageUrl }}" class="image" />
+            </div>
+            <div class="main-container" *ngIf="showTitle || showContent">
+                <h2 class="title {{ titlePositionClass }}" *ngIf="showTitle">
+                    {{ title }}
+                </h2>
+                <div
+                    class="section-break"
+                    *ngIf="showTitle && showContent"
+                ></div>
+                <p
+                    class="content {{ contentPositionClass }}"
+                    *ngIf="showContent"
+                >
+                    {{ content }}
+                </p>
+                <div class="dynamic-content {{ contentPositionClass }}">
+                    <ng-content></ng-content>
+                </div>
             </div>
         </div>
     </div>

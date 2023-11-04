@@ -1,7 +1,7 @@
 @import '../../../theme-colours.scss';
 @import '../../../font-sizes.scss';
 
-$edge-padding-x: 15%;
+$edge-padding-x: 10px;
 $edge-padding-y: 5%;
 $inner-padding-x: 20px;
 $inner-padding-y: 20px;
@@ -21,6 +21,11 @@ $inner-padding-y: 20px;
     background-color: #ffffff00;
 }
 
+.section-card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .section-card {
     display: flex;
     justify-content: center;
@@ -29,6 +34,7 @@ $inner-padding-y: 20px;
 
 .section-card.padding-x {
     width: calc(100% - 2 * $edge-padding-x);
+    max-width: 1000px;
     padding-left: $edge-padding-x;
     padding-right: $edge-padding-x;
 }
