@@ -25,13 +25,17 @@ $inner-padding-y: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 60px 0;
 }
 
-.text-section-card {
-    padding: $edge-padding-y $edge-padding-x;
+.text-section-card.padding-x {
     width: calc(100% - 2 * $edge-padding-x);
+    padding-left: $edge-padding-x;
+    padding-right: $edge-padding-x;
+}
+
+.text-section-card.padding-y {
+    padding-top: $edge-padding-y;
+    padding-bottom: $edge-padding-y;
 }
 
 .containers {

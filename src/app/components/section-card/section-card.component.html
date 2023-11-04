@@ -1,4 +1,8 @@
-<div class="text-section-card {{ backgroundTypeClass }}">
+<div
+    class="text-section-card {{ backgroundTypeClass }} {{
+        sectionPaddingX ? 'padding-x' : ''
+    }} {{ sectionPaddingY ? 'padding-y' : '' }}"
+>
     <div class="containers {{ imagePositionClass }}">
         <div class="image-container" *ngIf="showImage">
             <img src="{{ imageUrl }}" class="image" />

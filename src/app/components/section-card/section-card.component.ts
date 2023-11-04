@@ -13,6 +13,8 @@ export class TextSectionCardComponent implements OnInit {
     @Input() public backgroundType!: string; // can be 'none', 'dark', or 'light' - default is 'light'
     @Input() public titlePosition!: string; // can be 'left', 'right', or 'center' - default is 'left'
     @Input('imgPos') public imagePosition!: string; // can be 'left', 'right', 'top', or 'bottom' - default is 'left'
+    @Input('paddingX') public sectionPaddingX: boolean = true;
+    @Input('paddingY') public sectionPaddingY: boolean = true;
 
     public titlePositionClass!: string;
     public backgroundTypeClass!: string;
