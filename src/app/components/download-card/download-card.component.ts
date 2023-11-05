@@ -6,9 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
     styleUrls: ['./download-card.component.scss']
 })
 export class DownloadCardComponent implements OnInit {
-    @Input() title: string = '';
-    @Input() desc: string = '';
-    @Input({ alias: 'src', required: true }) downloadUrl!: string;
+    @Input() public title: string = '';
+    @Input() public desc: string = '';
+    @Input({ alias: 'src', required: true }) public downloadUrl!: string;
+    @Input('imgSrc') public backgroundImgSrc: string = '';
 
     public showTitle: boolean = false;
     public showDesc: boolean = false;
@@ -21,5 +22,8 @@ export class DownloadCardComponent implements OnInit {
         if (this.desc !== '') {
             this.showDesc = true;
         }
+
+        // preparing the image URL for CSS styling
+        this.backgroundImgSrc = 'url(' + this.backgroundImgSrc + ')';
     }
 }
