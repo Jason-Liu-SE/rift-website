@@ -10,6 +10,7 @@ import { DownloadsPageComponent } from './pages/downloads-page/downloads-page.co
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ImageShowcasePageComponent } from './pages/image-showcase-page/image-showcase-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { JoinPageComponent } from './pages/join-page/join-page.component';
 
 const routes: Routes = [
     {
@@ -68,6 +69,12 @@ const routes: Routes = [
         data: { component: ContactPageComponent }
     },
     {
+        path: 'join',
+        component: PageTemplateComponent,
+        title: 'The Rift - Join',
+        data: { component: JoinPageComponent, isTransparent: false }
+    },
+    {
         path: '**',
         component: PageTemplateComponent,
         title: 'The Rift - Error 404',
@@ -96,7 +103,8 @@ export const routingComponents = [
     DownloadsPageComponent,
     ErrorPageComponent,
     ImageShowcasePageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    JoinPageComponent
 ];
 
 imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })];
