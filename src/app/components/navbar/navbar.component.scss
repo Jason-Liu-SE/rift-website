@@ -19,8 +19,8 @@ $h-logo-edge-padding: 10px;
 .rift-navbar {
     display: flex;
     flex-direction: row;
-    width: 90vw;
-    max-width: 1920px;
+    width: 100%;
+    max-width: 1000px;
     height: 50px;
     padding-left: calc(100vw - 100%);
 }
