@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-join-page',
-  templateUrl: './join-page.component.html',
-  styleUrls: ['./join-page.component.scss']
+    selector: 'app-join-page',
+    templateUrl: './join-page.component.html',
+    styleUrls: ['./join-page.component.scss']
 })
-export class JoinPageComponent {
-
-}
+export class JoinPageComponent {}

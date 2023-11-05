@@ -72,7 +72,11 @@ const routes: Routes = [
         path: 'join',
         component: PageTemplateComponent,
         title: 'The Rift - Join',
-        data: { component: JoinPageComponent, isTransparent: false }
+        data: {
+            component: JoinPageComponent,
+            isTransparent: false,
+            showContactSection: true
+        }
     },
     {
         path: '**',
@@ -80,8 +84,7 @@ const routes: Routes = [
         title: 'The Rift - Error 404',
         data: {
             component: ErrorPageComponent,
-            isTransparent: false,
-            showContactSection: false
+            isTransparent: false
         }
     }
 ];

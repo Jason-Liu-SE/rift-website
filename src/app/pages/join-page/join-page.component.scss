@@ -1,0 +1,9 @@
+@import '../../../theme-colours.scss';
+
+.form-button {
+    margin: 20px;
+}
+
+.form-button:hover {
+    filter: grayscale(0.2);
+}
