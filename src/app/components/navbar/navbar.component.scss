@@ -2,6 +2,7 @@
 
 $h-navbar-edge-padding: 10px;
 $h-logo-edge-padding: 10px;
+$link-hover-colour: rgb(255, 0, 230);
 
 .rift-navbar-wrapper {
     position: fixed;
@@ -41,7 +42,6 @@ $h-logo-edge-padding: 10px;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     height: inherit;
     align-items: center;
 }
@@ -51,7 +51,6 @@ $h-logo-edge-padding: 10px;
     height: 100%;
     align-items: center;
     vertical-align: middle;
-    cursor: pointer;
 }
 
 .nav-link {
@@ -62,15 +61,22 @@ $h-logo-edge-padding: 10px;
     padding: 0 2px;
     text-decoration: none;
     height: 100%;
+    border-width: 2px;
+    border-color: transparent;
+    border-style: none none solid none;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 .nav-link.link-active {
     color: $colour-galactic-purple;
+    border-color: $colour-galactic-purple;
     font-weight: 900;
 }
 
 .nav-link:hover {
-    color: rgb(255, 0, 230);
+    color: $link-hover-colour;
+    border-color: $link-hover-colour;
 }
 
 .nav-link p {
@@ -92,6 +98,7 @@ $h-logo-edge-padding: 10px;
     display: flex;
     height: 100%;
     align-items: center;
+    cursor: pointer;
 }
 
 .rift-logo {
@@ -127,4 +134,29 @@ $h-logo-edge-padding: 10px;
 .right-align {
     flex: 1;
     justify-content: flex-end;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-width: 2px;
+    border-color: transparent;
+    border-style: none none solid none;
+    border-radius: 2px;
+}
+
+.button-container:has(> .join-button.mat-button-active) {
+    border-color: $colour-primary;
+}
+
+.join-button {
+    width: 100%;
+    margin: 0px;
+}
+
+.join-button.mat-button-active {
+    background-color: transparent;
+    border: 2px solid $colour-primary;
 }
