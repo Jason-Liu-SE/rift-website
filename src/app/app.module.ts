@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
@@ -52,7 +53,8 @@ import { MapProviderService } from './services/map-provider.service';
         BrowserAnimationsModule,
         MatButtonModule,
         MatPaginatorModule,
-        MatIconModule
+        MatIconModule,
+        HttpClientModule
     ],
     providers: [GalleryProviderService, MapProviderService],
     bootstrap: [AppComponent]
