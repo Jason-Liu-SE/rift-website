@@ -24,6 +24,7 @@ import { GalleryProviderService } from './services/gallery-provider.service';
 import { ImageSlideshowComponent } from './components/image-slideshow/image-slideshow.component';
 import { NewsDisplayComponent } from './components/news/news-display/news-display.component';
 import { DownloadCardComponent } from './components/download-card/download-card.component';
+import { MapProviderService } from './services/map-provider.service';
 
 @NgModule({
     declarations: [
@@ -53,7 +54,7 @@ import { DownloadCardComponent } from './components/download-card/download-card.
         MatPaginatorModule,
         MatIconModule
     ],
-    providers: [GalleryProviderService],
+    providers: [GalleryProviderService, MapProviderService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
