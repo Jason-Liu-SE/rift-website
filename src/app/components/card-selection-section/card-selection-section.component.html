@@ -1,0 +1,22 @@
+<div class="collection-section">
+    <div class="collection-wrapper">
+        <div
+            class="collection-card-grid collection-card"
+            *ngFor="let item of data"
+        >
+            <div
+                class="background-content"
+                [style.background-image]="
+                    'url(\'../../../../assets/home/1.png\')'
+                "
+                routerLink="/gallery/season-1"
+            ></div>
+            <a class="overlay-content" routerLink="/gallery/season-1">
+                <hr class="top-bar" />
+                <h3 class="title">Season 5</h3>
+                <p class="description">15 Photos</p>
+                <hr class="bottom-bar" />
+            </a>
+        </div>
+    </div>
+</div>

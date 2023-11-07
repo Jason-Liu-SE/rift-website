@@ -18,7 +18,7 @@ import { PageTemplateDirective } from './directives/page-template.directive';
 import { WelcomeCardComponent } from './components/welcome-card/welcome-card.component';
 import { SectionCardComponent } from './components/section-card/section-card.component';
 import { CaptionCardComponent } from './components/caption-card/caption-card.component';
-import { CollectionSectionComponent } from './components/gallery/collection-section/collection-section.component';
+import { CardSelectionSectionComponent } from './components/card-selection-section/card-selection-section.component';
 import { ImageShowcaseSectionComponent } from './components/image-showcase-section/image-showcase-section.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { GalleryProviderService } from './services/gallery-provider.service';
@@ -40,7 +40,7 @@ import { MapProviderService } from './services/map-provider.service';
         WelcomeCardComponent,
         SectionCardComponent,
         CaptionCardComponent,
-        CollectionSectionComponent,
+        CardSelectionSectionComponent,
         ImageShowcaseSectionComponent,
         BackButtonComponent,
         ImageSlideshowComponent,
