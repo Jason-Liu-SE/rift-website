@@ -12,6 +12,7 @@ export class PageTemplateComponent implements OnInit {
     public showContactSection: boolean;
     public mainComponent: Type<any>;
     public isTransparent!: boolean;
+    public showFooter: boolean;
 
     @ViewChild(PageTemplateDirective, { static: true })
     appPageTemplateHost!: PageTemplateDirective;
@@ -21,12 +22,14 @@ export class PageTemplateComponent implements OnInit {
         const isTransparentProp = this.route.snapshot.data['isTransparent'];
         const showContactSectionProp =
             this.route.snapshot.data['showContactSection'];
+        const showFooterProp = this.route.snapshot.data['showFooter'];
 
         this.isTransparent =
             isTransparentProp == null ? true : isTransparentProp;
         this.mainComponent = this.route.snapshot.data['component'];
         this.showContactSection =
             showContactSectionProp == null ? false : showContactSectionProp;
+        this.showFooter = showFooterProp == null ? true : showFooterProp;
     }
 
     // displaying the passed component dynamically

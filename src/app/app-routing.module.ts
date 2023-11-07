@@ -11,6 +11,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ImageShowcasePageComponent } from './pages/image-showcase-page/image-showcase-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { JoinPageComponent } from './pages/join-page/join-page.component';
+import { MapSeasonOnePageComponent } from './pages/map-season-one-page/map-season-one-page.component';
 
 const routes: Routes = [
     {
@@ -48,7 +49,17 @@ const routes: Routes = [
         path: 'map',
         component: PageTemplateComponent,
         title: 'The Rift - Map',
-        data: { component: MapPageComponent, isTransparent: false }
+        data: { component: MapPageComponent }
+    },
+    {
+        path: 'map/season-1',
+        component: PageTemplateComponent,
+        title: 'The Rift - Map: Season 1',
+        data: {
+            component: MapSeasonOnePageComponent,
+            isTransparent: false,
+            showFooter: false
+        }
     },
     {
         path: 'about',
@@ -78,6 +89,7 @@ const routes: Routes = [
             showContactSection: true
         }
     },
+
     {
         path: '**',
         component: PageTemplateComponent,
@@ -107,7 +119,8 @@ export const routingComponents = [
     ErrorPageComponent,
     ImageShowcasePageComponent,
     ContactPageComponent,
-    JoinPageComponent
+    JoinPageComponent,
+    MapSeasonOnePageComponent
 ];
 
 imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })];
