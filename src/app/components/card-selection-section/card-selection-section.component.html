@@ -6,15 +6,13 @@
         >
             <div
                 class="background-content"
-                [style.background-image]="
-                    'url(\'../../../../assets/home/1.png\')'
-                "
-                routerLink="/gallery/season-1"
+                [style.background-image]="'url(' + item.imageUrl + ')'"
+                routerLink="{{ item.routerLink }}"
             ></div>
-            <a class="overlay-content" routerLink="/gallery/season-1">
+            <a class="overlay-content" routerLink="{{ item.routerLink }}">
                 <hr class="top-bar" />
-                <h3 class="title">Season 5</h3>
-                <p class="description">15 Photos</p>
+                <h3 class="title">{{ item.title }}</h3>
+                <p class="description" *ngIf="item.desc">{{ item.desc }}</p>
                 <hr class="bottom-bar" />
             </a>
         </div>

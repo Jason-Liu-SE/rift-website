@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ICardSelection } from 'src/app/interfaces/card-selection.interface';
 
 @Component({
     selector: 'app-card-selection-section',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./card-selection-section.component.scss']
 })
 export class CardSelectionSectionComponent {
-    public data: number[] = [1, 1, 1, 1, 1];
+    @Input({ required: true }) public data!: ICardSelection[];
 }
