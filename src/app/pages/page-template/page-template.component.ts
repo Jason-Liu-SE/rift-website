@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, Type } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageTemplateDirective } from 'src/app/directives/page-template.directive';
-import { PageTemplateType } from './page-template-type.component';
+import { IPageTemplate } from '../../interfaces/page-template.interface';
 
 @Component({
     selector: 'app-page-template',
@@ -34,7 +34,7 @@ export class PageTemplateComponent implements OnInit {
         const viewContainerRef = this.appPageTemplateHost.viewContainerRef;
         viewContainerRef.clear();
 
-        const componentRef = viewContainerRef.createComponent<PageTemplateType>(
+        const componentRef = viewContainerRef.createComponent<IPageTemplate>(
             this.mainComponent
         );
     }
