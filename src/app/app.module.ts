@@ -27,6 +27,7 @@ import { NewsDisplayComponent } from './components/news/news-display/news-displa
 import { DownloadCardComponent } from './components/download-card/download-card.component';
 import { MapProviderService } from './services/map-provider.service';
 import { SafePipe } from './utilities/SafePipe.util';
+import { MessageCardComponent } from './components/message-card/message-card.component';
 
 @NgModule({
     declarations: [
@@ -47,7 +48,8 @@ import { SafePipe } from './utilities/SafePipe.util';
         ImageSlideshowComponent,
         NewsDisplayComponent,
         DownloadCardComponent,
-        SafePipe
+        SafePipe,
+        MessageCardComponent
     ],
     imports: [
         BrowserModule,
