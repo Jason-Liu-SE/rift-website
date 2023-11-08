@@ -1,0 +1,28 @@
+:host {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.map-season-one-page {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.mapIframe {
+    flex: 1;
+    border: none;
+}
+
+.back-button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 3;
+    padding: 0.2em 0.4em 0.2em 0.2em;
+    background-color: rgb(238, 238, 238);
+    border-radius: 1px;
+    border: solid rgb(238, 238, 238) 1px;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.53));
+}

@@ -1,5 +1,5 @@
 <div class="image-showcase-section">
-    <app-back-button [destination]="'/gallery'" />
+    <app-back-button [destination]="'/gallery'" [title]="'Gallery'" />
     <ul class="caption-card-gallery">
         <li class="caption-card" *ngFor="let image of images; index as i">
             <button class="image-button" (click)="handleImageClick($event)">

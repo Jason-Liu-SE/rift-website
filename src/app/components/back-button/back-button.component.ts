@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class BackButtonComponent {
     @Input({ alias: 'destination', required: true }) public link!: string;
+    @Input({ required: true }) public title!: string;
 }
