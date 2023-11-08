@@ -26,6 +26,7 @@ import { ImageSlideshowComponent } from './components/image-slideshow/image-slid
 import { NewsDisplayComponent } from './components/news/news-display/news-display.component';
 import { DownloadCardComponent } from './components/download-card/download-card.component';
 import { MapProviderService } from './services/map-provider.service';
+import { SafePipe } from './utilities/SafePipe.util';
 
 @NgModule({
     declarations: [
@@ -45,7 +46,8 @@ import { MapProviderService } from './services/map-provider.service';
         BackButtonComponent,
         ImageSlideshowComponent,
         NewsDisplayComponent,
-        DownloadCardComponent
+        DownloadCardComponent,
+        SafePipe
     ],
     imports: [
         BrowserModule,
