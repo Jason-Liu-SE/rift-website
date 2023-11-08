@@ -10,10 +10,16 @@ export class MapSeasonOnePageComponent {
     public bluemapUrl: string;
     public serverUrl: string;
 
+    public showHAMsg: boolean = true; // HA = Hardware Acceleration
+
     private constants: Constants = new Constants();
 
     constructor() {
         this.bluemapUrl = this.constants.BLUEMAP_URL;
         this.serverUrl = this.constants.API_ENDPOINT;
+    }
+
+    public toggleHAMsg(): void {
+        this.showHAMsg = !this.showHAMsg;
     }
 }
