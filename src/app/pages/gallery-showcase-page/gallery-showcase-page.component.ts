@@ -4,11 +4,11 @@ import { ICaptionCard } from 'src/app/interfaces/slideshow-image.interface';
 import { GalleryProviderService } from 'src/app/services/gallery-provider.service';
 
 @Component({
-    selector: 'app-image-showcase-page',
-    templateUrl: './image-showcase-page.component.html',
-    styleUrls: ['./image-showcase-page.component.scss']
+    selector: 'app-gallery-showcase-page',
+    templateUrl: './gallery-showcase-page.component.html',
+    styleUrls: ['./gallery-showcase-page.component.scss']
 })
-export class ImageShowcasePageComponent {
+export class GalleryShowcasePageComponent {
     public title: string;
     public imageUrl: string;
     public images: ICaptionCard[];
@@ -25,7 +25,7 @@ export class ImageShowcasePageComponent {
         const imageUrl = this.route.snapshot.data['imageUrl'];
         const collectionName = this.route.snapshot.data['collection'];
 
-        this.title = title == null ? 'Image Showcase Page' : title;
+        this.title = title == null ? 'Gallery Showcase Page' : title;
         this.imageUrl = imageUrl == null ? '' : imageUrl;
         this.collectionName = collectionName == null ? '' : collectionName;
 

@@ -8,7 +8,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { PageTemplateComponent } from './pages/page-template/page-template.component';
 import { DownloadsPageComponent } from './pages/downloads-page/downloads-page.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
-import { ImageShowcasePageComponent } from './pages/image-showcase-page/image-showcase-page.component';
+import { GalleryShowcasePageComponent } from './pages/gallery-showcase-page/gallery-showcase-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { JoinPageComponent } from './pages/join-page/join-page.component';
 import { MapSeasonOnePageComponent } from './pages/map-season-one-page/map-season-one-page.component';
@@ -42,7 +42,7 @@ const routes: Routes = [
         component: PageTemplateComponent,
         title: 'The Rift - Gallery: Season 1',
         data: {
-            component: ImageShowcasePageComponent,
+            component: GalleryShowcasePageComponent,
             title: 'Gallery: Season 1',
             imageUrl: '../../../assets/home/2.png',
             collection: 'season-1'
@@ -53,7 +53,7 @@ const routes: Routes = [
         component: PageTemplateComponent,
         title: 'The Rift - Gallery: Season 2',
         data: {
-            component: ImageShowcasePageComponent,
+            component: GalleryShowcasePageComponent,
             title: 'Gallery: Season 2',
             imageUrl: '../../../assets/home/3.png',
             collection: 'season-2'
@@ -130,7 +130,7 @@ export const routingComponents = [
     AboutPageComponent,
     DownloadsPageComponent,
     ErrorPageComponent,
-    ImageShowcasePageComponent,
+    GalleryShowcasePageComponent,
     ContactPageComponent,
     JoinPageComponent,
     MapSeasonOnePageComponent
