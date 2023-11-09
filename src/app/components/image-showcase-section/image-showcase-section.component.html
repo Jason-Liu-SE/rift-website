@@ -1,7 +1,7 @@
 <div class="image-showcase-section">
     <app-back-button [destination]="'/gallery'" [title]="'Gallery'" />
     <ul class="caption-card-gallery">
-        <li class="caption-card" *ngFor="let image of images">
+        <li class="caption-card" *ngFor="let image of captionedImages">
             <button class="image-button" (click)="handleImageClick($event)">
                 <app-caption-card
                     [src]="image.url"
@@ -26,7 +26,7 @@
         <app-image-slideshow
             [src]="popUpImage"
             [caption]="popUpCaption"
-            [captionedImages]="getImages(collectionName)"
+            [captionedImages]="captionedImages"
             [startingIndex]="0"
         />
         <button class="exit-button" mat-fab extended (click)="handleClose()">

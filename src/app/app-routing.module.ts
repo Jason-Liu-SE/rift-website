@@ -44,7 +44,8 @@ const routes: Routes = [
         data: {
             component: ImageShowcasePageComponent,
             title: 'Gallery: Season 1',
-            imageUrl: '../../../assets/home/2.png'
+            imageUrl: '../../../assets/home/2.png',
+            collection: 'season-1'
         }
     },
     {
@@ -54,7 +55,8 @@ const routes: Routes = [
         data: {
             component: ImageShowcasePageComponent,
             title: 'Gallery: Season 2',
-            imageUrl: '../../../assets/home/3.png'
+            imageUrl: '../../../assets/home/3.png',
+            collection: 'season-2'
         }
     },
     {
