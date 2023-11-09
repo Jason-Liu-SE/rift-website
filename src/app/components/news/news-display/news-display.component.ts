@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { INewsItem } from 'src/app/interfaces/news-item';
+import { INewsItem } from 'src/app/interfaces/news-item.interface';
 
 @Component({
     selector: 'app-news-display',
