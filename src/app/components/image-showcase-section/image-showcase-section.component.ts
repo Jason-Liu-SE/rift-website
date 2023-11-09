@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { GalleryProviderService } from 'src/app/services/gallery-provider.service';
 import { PageEvent } from '@angular/material/paginator';
+import { ICaptionCard } from 'src/app/interfaces/slideshow-image.interface';
 
 @Component({
     selector: 'app-image-showcase-section',
@@ -12,19 +13,20 @@ export class ImageShowcaseSectionComponent {
     public collectionName!: string;
 
     public isPopUpVisible: boolean = false;
-    public images: string[];
+    public images: ICaptionCard[];
     public length = 50;
     public pageSize = 20;
     public pageIndex = 0;
     public pageEvent!: PageEvent;
 
     public popUpImage: string = '';
+    public popUpCaption: string = '';
 
     constructor(private galleryProvider: GalleryProviderService) {
         this.images = this.getImages(this.collectionName);
     }
 
-    public getImages(collection: string): string[] {
+    public getImages(collection: string): ICaptionCard[] {
         return this.galleryProvider.getCollectionImages(collection);
     }
 
@@ -38,8 +40,10 @@ export class ImageShowcaseSectionComponent {
     public handleImageClick(event: MouseEvent): void {
         const target: Element = event.target as Element;
         const imageUrl: string | null = target.getAttribute('image-url');
+        const caption: string | null = target.getAttribute('caption');
 
         this.popUpImage = imageUrl ? (imageUrl as string) : '';
+        this.popUpCaption = caption ? (caption as string) : '';
         this.isPopUpVisible = true;
     }
 

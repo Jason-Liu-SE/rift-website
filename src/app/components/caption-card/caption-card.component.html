@@ -2,6 +2,10 @@
     <img class="background-image" src="{{ imageUrl }}" alt="{{ altDesc }}" />
     <div class="overlay-elements {{ visibilityType }}">
         <p class="caption-text">{{ caption }}</p>
-        <div class="gradient" [attr.image-url]="imageUrl"></div>
+        <div
+            class="gradient"
+            [attr.image-url]="imageUrl"
+            [attr.caption]="caption"
+        ></div>
     </div>
 </div>

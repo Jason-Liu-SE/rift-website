@@ -1,11 +1,11 @@
 <div class="image-showcase-section">
     <app-back-button [destination]="'/gallery'" [title]="'Gallery'" />
     <ul class="caption-card-gallery">
-        <li class="caption-card" *ngFor="let image of images; index as i">
+        <li class="caption-card" *ngFor="let image of images">
             <button class="image-button" (click)="handleImageClick($event)">
                 <app-caption-card
-                    [src]="image"
-                    [caption]="i.toString()"
+                    [src]="image.url"
+                    [caption]="image.caption"
                     [caption-visibility]="'hover'"
                 />
             </button>
@@ -25,7 +25,8 @@
     <div class="image-pop-up" *ngIf="isPopUpVisible">
         <app-image-slideshow
             [src]="popUpImage"
-            [images]="getImages(collectionName)"
+            [caption]="popUpCaption"
+            [captionedImages]="getImages(collectionName)"
             [startingIndex]="0"
         />
         <button class="exit-button" mat-fab extended (click)="handleClose()">

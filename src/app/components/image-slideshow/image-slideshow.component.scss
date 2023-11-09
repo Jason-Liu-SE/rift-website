@@ -32,13 +32,19 @@ $edge-padding-horizontal: 5vw;
     max-width: 100%;
 }
 
+.caption {
+    color: $colour-light-text;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     width: 15vh;
     background-color: rgba($colour-blue-grey, 0.1);
     padding: 15px 20px;
-    margin-top: clamp(20px, 5vh, 5vh);
     border-radius: 15px;
 }
 

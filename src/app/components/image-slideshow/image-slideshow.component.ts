@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ICaptionCard } from 'src/app/interfaces/slideshow-image.interface';
 
 @Component({
     selector: 'app-image-slideshow',
@@ -7,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ImageSlideshowComponent {
     @Input({ alias: 'src', required: true }) public imageUrl!: string;
-    @Input() public images: string[] = [];
+    @Input() public caption: string = '';
+    @Input() public captionedImages: ICaptionCard[] = [];
     @Input() public startingIndex: number = 0;
 }
