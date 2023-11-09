@@ -85,8 +85,7 @@ const routes: Routes = [
         title: 'The Rift - Join',
         data: {
             component: JoinPageComponent,
-            isTransparent: false,
-            showContactSection: true
+            isTransparent: false
         }
     },
 
