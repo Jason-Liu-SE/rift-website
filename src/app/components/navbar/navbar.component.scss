@@ -66,12 +66,13 @@ $link-hover-colour: rgb(255, 0, 230);
     border-style: none none solid none;
     border-radius: 2px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .nav-link.link-active {
     color: $colour-galactic-purple;
     border-color: $colour-galactic-purple;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 .nav-link:hover {
