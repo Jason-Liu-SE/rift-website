@@ -16,13 +16,13 @@ export class GalleryPageComponent {
         },
         {
             imageUrl: '../../../assets/home/2.png',
-            routerLink: '/gallery/season-1',
+            routerLink: '/gallery/season-2',
             title: 'Season 2',
             desc: '15 photos'
         },
         {
             imageUrl: '../../../assets/home/3.png',
-            routerLink: '/gallery/season-1',
+            routerLink: '/gallery/season-3',
             title: 'Season 3',
             desc: '112 photos'
         }

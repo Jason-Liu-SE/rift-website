@@ -42,7 +42,19 @@ const routes: Routes = [
         component: PageTemplateComponent,
         title: 'The Rift - Gallery: Season 1',
         data: {
-            component: ImageShowcasePageComponent
+            component: ImageShowcasePageComponent,
+            title: 'Gallery: Season 1',
+            imageUrl: '../../../assets/home/2.png'
+        }
+    },
+    {
+        path: 'gallery/season-2',
+        component: PageTemplateComponent,
+        title: 'The Rift - Gallery: Season 2',
+        data: {
+            component: ImageShowcasePageComponent,
+            title: 'Gallery: Season 2',
+            imageUrl: '../../../assets/home/3.png'
         }
     },
     {
