@@ -7,7 +7,7 @@ import { ICardSelection } from 'src/app/interfaces/card-selection.interface';
     styleUrls: ['./gallery-page.component.scss']
 })
 export class GalleryPageComponent {
-    public galleryData: ICardSelection[] = [
+    public galleryCollections: ICardSelection[] = [
         {
             imageUrl: '../../../assets/home/1.png',
             routerLink: '/gallery/season-1',

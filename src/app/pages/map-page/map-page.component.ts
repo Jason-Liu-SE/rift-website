@@ -7,7 +7,7 @@ import { ICardSelection } from 'src/app/interfaces/card-selection.interface';
     styleUrls: ['./map-page.component.scss']
 })
 export class MapPageComponent implements OnInit {
-    public mapData: ICardSelection[] = [
+    public mapItems: ICardSelection[] = [
         {
             imageUrl: '../../../assets/home/1.png',
             routerLink: '/map/season-1',

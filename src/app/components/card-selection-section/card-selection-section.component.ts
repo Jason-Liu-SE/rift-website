@@ -7,5 +7,6 @@ import { ICardSelection } from 'src/app/interfaces/card-selection.interface';
     styleUrls: ['./card-selection-section.component.scss']
 })
 export class CardSelectionSectionComponent {
-    @Input({ required: true }) public data!: ICardSelection[];
+    @Input({ alias: 'items', required: true })
+    public items!: ICardSelection[];
 }
