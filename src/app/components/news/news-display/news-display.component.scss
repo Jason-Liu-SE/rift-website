@@ -5,12 +5,14 @@ $news-item-padding: 15px;
 
 .news-display {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-left: calc(100vw - 100%);
 }
 
 .news-container {
     padding: 0;
+    margin: 0;
     width: 100%;
     max-width: 1000px;
     list-style: none;
@@ -55,4 +57,8 @@ $news-item-padding: 15px;
     margin: 0;
     line-height: calc($font-size-medium + 0.2em);
     font-size: $font-size-medium;
+}
+
+.paginator {
+    align-self: flex-end;
 }
