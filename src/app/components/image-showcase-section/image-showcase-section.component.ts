@@ -25,6 +25,8 @@ export class ImageShowcaseSectionComponent {
         this.length = e.length;
         this.pageSize = e.pageSize;
         this.pageIndex = e.pageIndex;
+
+        window.scrollTo(0, 0);
     }
 
     public handleImageClick(event: MouseEvent): void {

@@ -39,5 +39,7 @@ export class NewsPageComponent {
             this.pageIndex * this.pageSize,
             this.pageSize
         );
+
+        window.scrollTo(0, 0);
     }
 }
