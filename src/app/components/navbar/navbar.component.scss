@@ -1,6 +1,5 @@
 @import '../../../theme-colours.scss';
 
-$h-navbar-edge-padding: 10px;
 $h-logo-edge-padding: 10px;
 $link-hover-colour: rgb(255, 0, 230);
 
@@ -29,7 +28,6 @@ $link-hover-colour: rgb(255, 0, 230);
 .always-visible {
     position: fixed;
     top: 0px;
-    padding: 0px $h-navbar-edge-padding;
     z-index: 10;
 }
 
