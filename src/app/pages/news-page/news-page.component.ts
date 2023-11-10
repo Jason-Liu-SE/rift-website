@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
+import { MatPaginatorIntl, PageEvent } from '@angular/material/paginator';
 import { INewsItem } from 'src/app/interfaces/news-item.interface';
+import { PaginatorIntlService } from 'src/app/services/paginator-intl.service';
 
 @Component({
     selector: 'app-page-news',
     templateUrl: './news-page.component.html',
-    styleUrls: ['./news-page.component.scss']
+    styleUrls: ['./news-page.component.scss'],
+    providers: [{ provide: MatPaginatorIntl, useClass: PaginatorIntlService }]
 })
 export class NewsPageComponent {
     public length = 50;

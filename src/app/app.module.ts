@@ -28,6 +28,7 @@ import { DownloadCardComponent } from './components/download-card/download-card.
 import { MapProviderService } from './services/map-provider.service';
 import { SafePipe } from './utilities/SafePipe.util';
 import { MessageCardComponent } from './components/message-card/message-card.component';
+import { PaginatorIntlService } from './services/paginator-intl.service';
 
 @NgModule({
     declarations: [
@@ -60,7 +61,11 @@ import { MessageCardComponent } from './components/message-card/message-card.com
         MatIconModule,
         HttpClientModule
     ],
-    providers: [GalleryProviderService, MapProviderService],
+    providers: [
+        GalleryProviderService,
+        MapProviderService,
+        PaginatorIntlService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 import { ActivatedRoute } from '@angular/router';
 import { ICaptionCard } from 'src/app/interfaces/slideshow-image.interface';
 import { GalleryProviderService } from 'src/app/services/gallery-provider.service';
+import { PaginatorIntlService } from 'src/app/services/paginator-intl.service';
 
 @Component({
     selector: 'app-gallery-showcase-page',
     templateUrl: './gallery-showcase-page.component.html',
-    styleUrls: ['./gallery-showcase-page.component.scss']
+    styleUrls: ['./gallery-showcase-page.component.scss'],
+    providers: [{ provide: MatPaginatorIntl, useClass: PaginatorIntlService }]
 })
 export class GalleryShowcasePageComponent {
     public title: string;
