@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ICardSelection } from 'src/app/interfaces/card-selection.interface';
+import { GalleryProviderService } from 'src/app/services/gallery-provider.service';
 
 @Component({
     selector: 'app-page-gallery',
@@ -7,24 +8,32 @@ import { ICardSelection } from 'src/app/interfaces/card-selection.interface';
     styleUrls: ['./gallery-page.component.scss']
 })
 export class GalleryPageComponent {
+    constructor(private galleryProvider: GalleryProviderService) {}
+
     public galleryCollections: ICardSelection[] = [
         {
             imageUrl: '../../../assets/home/1.png',
             routerLink: '/gallery/season-1',
             title: 'Season 1',
-            desc: '5 photos'
+            desc: `${this.galleryProvider.countCollectionImages(
+                'season-1'
+            )} photos`
         },
         {
             imageUrl: '../../../assets/home/2.png',
             routerLink: '/gallery/season-2',
             title: 'Season 2',
-            desc: '15 photos'
+            desc: `${this.galleryProvider.countCollectionImages(
+                'season-2'
+            )} photos`
         },
         {
             imageUrl: '../../../assets/home/3.png',
             routerLink: '/gallery/season-3',
             title: 'Season 3',
-            desc: '112 photos'
+            desc: `${this.galleryProvider.countCollectionImages(
+                'season-3'
+            )} photos`
         }
     ];
 }
