@@ -1,5 +1,8 @@
 <div class="image-showcase-section">
-    <app-back-button [destination]="'/gallery'" [title]="'Gallery'" />
+    <div class="image-showcase-header">
+        <app-back-button [destination]="'/gallery'" [title]="'Gallery'" />
+        <p class="page-caption" *ngIf="pageCaption !== ''">{{ pageCaption }}</p>
+    </div>
     <ul class="caption-card-gallery">
         <li class="caption-card" *ngFor="let image of captionedImages">
             <button class="image-button" (click)="handleImageClick($event)">

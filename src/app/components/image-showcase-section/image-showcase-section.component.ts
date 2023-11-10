@@ -10,6 +10,7 @@ import { ICaptionCard } from 'src/app/interfaces/slideshow-image.interface';
 export class ImageShowcaseSectionComponent {
     @Input({ required: true })
     public captionedImages!: ICaptionCard[];
+    @Input() public pageCaption: string = '';
 
     public isPopUpVisible: boolean = false;
     public length = 50;
