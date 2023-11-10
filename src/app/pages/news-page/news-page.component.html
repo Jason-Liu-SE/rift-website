@@ -7,6 +7,18 @@
         [desc]="'Check out what\'s going on with The Rift'"
     ></app-background-image-card>
     <div class="paginated-news-display-container">
+        <mat-paginator
+            #paginator
+            class="paginator"
+            (page)="handlePageEvent($event)"
+            [length]="length"
+            [pageSize]="pageSize"
+            [showFirstLastButtons]="true"
+            [pageIndex]="pageIndex"
+            [hidePageSize]="true"
+            aria-label="Select page"
+        >
+        </mat-paginator>
         <app-news-display
             class="news-display"
             [newsItems]="newsItems"
