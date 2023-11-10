@@ -1,24 +1,10 @@
 <div class="news-display">
-    <div class="news-pagination-container">
-        <ul class="news-container">
-            <li class="news-item" *ngFor="let item of newsItems">
-                <h2 class="title">{{ item.title }}</h2>
-                <h3 class="date">{{ item.date }}</h3>
-                <hr class="separator" />
-                <p class="content">{{ item.content }}</p>
-            </li>
-        </ul>
-        <mat-paginator
-            #paginator
-            class="paginator"
-            (page)="handlePageEvent($event)"
-            [length]="length"
-            [pageSize]="pageSize"
-            [showFirstLastButtons]="true"
-            [pageIndex]="pageIndex"
-            [hidePageSize]="true"
-            aria-label="Select page"
-        >
-        </mat-paginator>
-    </div>
+    <ul class="news-container">
+        <li class="news-item" *ngFor="let item of newsItems">
+            <h2 class="title">{{ item.title }}</h2>
+            <h3 class="date">{{ item.date }}</h3>
+            <hr class="separator" />
+            <p class="content">{{ item.content }}</p>
+        </li>
+    </ul>
 </div>

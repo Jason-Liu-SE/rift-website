@@ -1,0 +1,26 @@
+.news-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.background-image-card {
+    width: 100%;
+}
+
+.news-display {
+    max-width: 1000px;
+}
+
+.paginated-news-display-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: calc(100vw - 100%);
+}
+
+.paginator {
+    justify-self: flex-end;
+}

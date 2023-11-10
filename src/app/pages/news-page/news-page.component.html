@@ -1,9 +1,27 @@
 <div class="news-page">
     <app-background-image-card
+        class="background-image-card"
         [src]="'../../../assets/home/3.png'"
         [isPageTitle]="true"
         [title]="'News'"
         [desc]="'Check out what\'s going on with The Rift'"
     ></app-background-image-card>
-    <app-news-display [newsItems]="newsItems"></app-news-display>
+    <div class="paginated-news-display-container">
+        <app-news-display
+            class="news-display"
+            [newsItems]="newsItems"
+        ></app-news-display>
+        <mat-paginator
+            #paginator
+            class="paginator"
+            (page)="handlePageEvent($event)"
+            [length]="length"
+            [pageSize]="pageSize"
+            [showFirstLastButtons]="true"
+            [pageIndex]="pageIndex"
+            [hidePageSize]="true"
+            aria-label="Select page"
+        >
+        </mat-paginator>
+    </div>
 </div>
