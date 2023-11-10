@@ -11,7 +11,7 @@ import { PaginatorIntlService } from 'src/app/services/paginator-intl.service';
     providers: [{ provide: MatPaginatorIntl, useClass: PaginatorIntlService }]
 })
 export class NewsPageComponent {
-    public length!: number;
+    public paginationLength!: number;
     public pageSize: number = 10;
     public pageIndex: number = 0;
     public pageEvent!: PageEvent;
@@ -19,7 +19,7 @@ export class NewsPageComponent {
     public newsItems: INewsItem[];
 
     constructor(private newsItemProvider: NewsItemProviderService) {
-        this.length = newsItemProvider.countNewsItems();
+        this.paginationLength = newsItemProvider.countNewsItems();
 
         // setting the initial page items
         this.newsItems = newsItemProvider.getNewsItems(
@@ -30,7 +30,7 @@ export class NewsPageComponent {
 
     public handlePageEvent(e: PageEvent) {
         this.pageEvent = e;
-        this.length = e.length;
+        this.paginationLength = e.length;
         this.pageSize = e.pageSize;
         this.pageIndex = e.pageIndex;
 
