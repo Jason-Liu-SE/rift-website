@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
 import { ICaptionCard } from 'src/app/interfaces/slideshow-image.interface';
 
 @Component({
@@ -10,24 +9,10 @@ import { ICaptionCard } from 'src/app/interfaces/slideshow-image.interface';
 export class ImageShowcaseSectionComponent {
     @Input({ required: true })
     public captionedImages!: ICaptionCard[];
-    @Input() public pageCaption: string = '';
 
     public isPopUpVisible: boolean = false;
-    public length = 50;
-    public pageSize = 20;
-    public pageIndex = 0;
-    public pageEvent!: PageEvent;
     public popUpImage: string = '';
     public popUpCaption: string = '';
-
-    public handlePageEvent(e: PageEvent) {
-        this.pageEvent = e;
-        this.length = e.length;
-        this.pageSize = e.pageSize;
-        this.pageIndex = e.pageIndex;
-
-        window.scrollTo(0, 0);
-    }
 
     public handleImageClick(event: MouseEvent): void {
         const target: Element = event.target as Element;

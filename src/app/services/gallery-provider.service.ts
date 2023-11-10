@@ -340,7 +340,15 @@ export class GalleryProviderService {
         ];
     }
 
-    public getCollectionImages(collectionName: string): ICaptionCard[] {
-        return this._images;
+    public getCollectionImages(
+        collectionName: string,
+        startIndex: number,
+        numItems: number
+    ): ICaptionCard[] {
+        return this._images.slice(startIndex, startIndex + numItems);
+    }
+
+    public countCollectionImages(collection: string): number {
+        return this._images.length;
     }
 }
