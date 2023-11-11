@@ -1,14 +1,16 @@
 <div class="image-slideshow">
     <div class="containers">
-        <div class="image-container">
-            <img class="image" src="{{ imageUrl }}" />
-        </div>
-        <div class="caption">{{ caption }}</div>
-        <div class="nav-container">
-            <button class="prev" mat-fab>
+        <div class="prev-button-container">
+            <button class="prev">
                 <mat-icon class="icon">chevron_left</mat-icon>
             </button>
-            <button class="next" mat-fab>
+        </div>
+        <div class="content-container">
+            <img class="image" src="{{ imageUrl }}" />
+            <p class="caption">{{ caption }}</p>
+        </div>
+        <div class="next-button-container">
+            <button class="next">
                 <mat-icon class="icon">chevron_right</mat-icon>
             </button>
         </div>
