@@ -18,9 +18,43 @@ export class ImageShowcaseSectionComponent {
 
         this.imageIndex = imageIndex ? (imageIndex as unknown as number) : 0;
         this.isPopUpVisible = true;
+
+        this.disablePageScrolling();
     }
 
     public handleClose(): void {
         this.isPopUpVisible = false;
+
+        this.enablePageScrolling();
+    }
+
+    private disablePageScrolling(): void {
+        // disabling scrolling if there is a scroll bar
+        const body = document.body,
+            html = document.documentElement;
+
+        const height = Math.max(
+            body.scrollHeight,
+            body.offsetHeight,
+            html.clientHeight,
+            html.scrollHeight,
+            html.offsetHeight
+        );
+
+        if (height > window.innerHeight) {
+            const scrollTop = html.scrollTop ? html.scrollTop : body.scrollTop;
+            html.classList.add('disable-scroll');
+            html.style.top = -scrollTop + 'px';
+        }
+    }
+
+    private enablePageScrolling() {
+        const html = document.documentElement;
+        const body = document.body;
+        const scrollTop = parseInt(html.style.top);
+
+        html.classList.remove('disable-scroll');
+        html.scrollTop = -scrollTop;
+        body.scrollTop = -scrollTop;
     }
 }

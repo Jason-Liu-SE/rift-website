@@ -23,6 +23,12 @@ body {
     margin: 0;
 }
 
+html.disable-scroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
 .mdc-button {
     transition-duration: 0.1s;
 }
