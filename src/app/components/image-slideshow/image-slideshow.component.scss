@@ -60,10 +60,16 @@ $edge-padding-horizontal: min(3em, 1vw);
     padding: 0;
 }
 
-.next:hover,
-.prev:hover {
+.next:hover:not(:disabled),
+.prev:hover:not(:disabled) {
     color: $colour-primary;
     cursor: pointer;
+}
+
+.next:disabled,
+.prev:disabled {
+    color: $colour-light-grey;
+    filter: opacity(0.5);
 }
 
 .icon {

@@ -1,16 +1,24 @@
 <div class="image-slideshow">
     <div class="containers">
         <div class="prev-button-container">
-            <button class="prev">
+            <button
+                class="prev"
+                (click)="handleClickPrev()"
+                [disabled]="isPrevDisabled"
+            >
                 <mat-icon class="icon">chevron_left</mat-icon>
             </button>
         </div>
         <div class="content-container">
-            <img class="image" src="{{ imageUrl }}" />
-            <p class="caption">{{ caption }}</p>
+            <img class="image" [src]="captionedImages[index].url" />
+            <p class="caption">{{ captionedImages[index].caption }}</p>
         </div>
         <div class="next-button-container">
-            <button class="next">
+            <button
+                class="next"
+                (click)="handleClickNext()"
+                [disabled]="isNextDisabled"
+            >
                 <mat-icon class="icon">chevron_right</mat-icon>
             </button>
         </div>

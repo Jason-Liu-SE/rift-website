@@ -10,17 +10,13 @@ export class ImageShowcaseSectionComponent {
     @Input({ required: true })
     public captionedImages!: ICaptionCard[];
 
+    public imageIndex: number = 0;
     public isPopUpVisible: boolean = false;
-    public popUpImage: string = '';
-    public popUpCaption: string = '';
 
-    public handleImageClick(event: MouseEvent): void {
-        const target: Element = event.target as Element;
-        const imageUrl: string | null = target.getAttribute('image-url');
-        const caption: string | null = target.getAttribute('caption');
+    public handleImageClick(imageButton: Element): void {
+        const imageIndex: string | null = imageButton.getAttribute('index');
 
-        this.popUpImage = imageUrl ? (imageUrl as string) : '';
-        this.popUpCaption = caption ? (caption as string) : '';
+        this.imageIndex = imageIndex ? (imageIndex as unknown as number) : 0;
         this.isPopUpVisible = true;
     }
 

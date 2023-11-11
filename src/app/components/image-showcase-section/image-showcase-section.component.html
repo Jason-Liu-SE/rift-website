@@ -1,7 +1,15 @@
 <div class="image-showcase-section">
     <ul class="caption-card-gallery">
-        <li class="caption-card" *ngFor="let image of captionedImages">
-            <button class="image-button" (click)="handleImageClick($event)">
+        <li
+            class="caption-card"
+            *ngFor="let image of captionedImages; index as i"
+        >
+            <button
+                class="image-button"
+                #imageButton
+                (click)="handleImageClick(imageButton)"
+                [attr.index]="i"
+            >
                 <app-caption-card
                     [src]="image.url"
                     [caption]="image.caption"
@@ -12,10 +20,8 @@
     </ul>
     <div class="image-pop-up" *ngIf="isPopUpVisible">
         <app-image-slideshow
-            [src]="popUpImage"
-            [caption]="popUpCaption"
             [captionedImages]="captionedImages"
-            [startingIndex]="0"
+            [startingIndex]="imageIndex"
         />
         <button class="exit-button" mat-fab extended (click)="handleClose()">
             <mat-icon class="exit-icon">close</mat-icon>Close
