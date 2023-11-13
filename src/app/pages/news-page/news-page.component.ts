@@ -16,16 +16,15 @@ export class NewsPageComponent {
     public pageIndex: number = 0;
     public pageEvent!: PageEvent;
 
-    public newsItems: INewsItem[];
+    public newsItems: INewsItem[] = [];
 
     constructor(private newsItemProvider: NewsItemProviderService) {
-        this.paginationLength = newsItemProvider.countNewsItems();
+        this.newsItemProvider
+            .countNewsItems()
+            .subscribe((data) => (this.paginationLength = data.count));
 
         // setting the initial page items
-        this.newsItems = newsItemProvider.getNewsItems(
-            this.pageIndex * this.pageSize,
-            this.pageSize
-        );
+        this.populateNewsItems();
     }
 
     public handlePageEvent(e: PageEvent) {
@@ -35,11 +34,14 @@ export class NewsPageComponent {
         this.pageIndex = e.pageIndex;
 
         // updating the displayed news items
-        this.newsItems = this.newsItemProvider.getNewsItems(
-            this.pageIndex * this.pageSize,
-            this.pageSize
-        );
+        this.populateNewsItems();
 
         window.scrollTo(0, 0);
+    }
+
+    private populateNewsItems() {
+        this.newsItemProvider
+            .getNewsItems(this.pageIndex * this.pageSize, this.pageSize)
+            .subscribe((data) => (this.newsItems = data.data));
     }
 }

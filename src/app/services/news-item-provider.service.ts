@@ -1,21 +1,24 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { INewsItem } from '../interfaces/news-item.interface';
+import { Observable } from 'rxjs';
+import { Constants } from '../config/constants';
 
 @Injectable({
     providedIn: 'root'
 })
 export class NewsItemProviderService {
-    private newsItems: INewsItem[];
+    private constants: Constants = new Constants();
 
-    constructor() {
-        this.newsItems = [];
+    constructor(private http: HttpClient) {}
+
+    public getNewsItems(startIndex: number, numItems: number): Observable<any> {
+        return this.http.get(
+            this.constants.API_ENDPOINT +
+                `/news/get-items?startIndex=${startIndex}&&limit=${numItems}`
+        );
     }
 
-    public getNewsItems(startIndex: number, numItems: number): INewsItem[] {
-        return this.newsItems.slice(startIndex, startIndex + numItems);
-    }
-
-    public countNewsItems(): number {
-        return this.newsItems.length;
+    public countNewsItems(): Observable<any> {
+        return this.http.get(this.constants.API_ENDPOINT + `/news/count-items`);
     }
 }
