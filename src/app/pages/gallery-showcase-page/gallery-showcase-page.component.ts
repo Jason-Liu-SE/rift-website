@@ -21,6 +21,8 @@ export class GalleryShowcasePageComponent {
     public pageIndex: number = 0;
     public pageEvent!: PageEvent;
 
+    private imageCache: Record<string, ICaptionCard[]> = {};
+
     // the title and imageUrl must be passed via the app-routing.module file as
     // 'data' elements
     constructor(
@@ -43,15 +45,7 @@ export class GalleryShowcasePageComponent {
                 this.paginationLength = data.count;
             });
 
-        this.galleryProvider
-            .getCollectionImagesObservable(
-                this.collectionName,
-                this.pageIndex * this.pageSize,
-                this.pageSize
-            )
-            .subscribe((data) => {
-                this.captionedImages = data.data;
-            });
+        this.populateCaptionedImages();
     }
 
     public handlePageEvent(e: PageEvent) {
@@ -61,6 +55,19 @@ export class GalleryShowcasePageComponent {
         this.pageIndex = e.pageIndex;
 
         // updating the displayed news items
+        this.captionedImages = [];
+
+        // grabbing images from cache, if they have been cached
+        if (this.imageCache[`${this.pageIndex}`]) {
+            this.captionedImages = this.imageCache[`${this.pageIndex}`];
+        } else {
+            this.populateCaptionedImages();
+        }
+
+        window.scrollTo(0, 0);
+    }
+
+    private populateCaptionedImages(): void {
         this.galleryProvider
             .getCollectionImagesObservable(
                 this.collectionName,
@@ -69,8 +76,8 @@ export class GalleryShowcasePageComponent {
             )
             .subscribe((data) => {
                 this.captionedImages = data.data;
-            });
 
-        window.scrollTo(0, 0);
+                this.imageCache[`${this.pageIndex}`] = this.captionedImages;
+            });
     }
 }
