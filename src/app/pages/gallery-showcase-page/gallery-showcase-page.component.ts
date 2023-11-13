@@ -14,7 +14,7 @@ import { PaginatorIntlService } from 'src/app/services/paginator-intl.service';
 export class GalleryShowcasePageComponent {
     public title: string;
     public imageUrl: string;
-    public captionedImages: ICaptionCard[];
+    public captionedImages: ICaptionCard[] = [];
     public collectionName: string;
     public paginationLength!: number;
     public pageSize: number = 30;
@@ -37,14 +37,21 @@ export class GalleryShowcasePageComponent {
         this.collectionName = collectionName == null ? '' : collectionName;
 
         // preparing data for pagination
-        this.paginationLength = this.galleryProvider.countCollectionImages(
-            this.collectionName
-        );
-        this.captionedImages = this.galleryProvider.getCollectionImages(
-            this.collectionName,
-            this.pageIndex * this.pageSize,
-            this.pageSize
-        );
+        this.galleryProvider
+            .getCollectionImageCountObservable(this.collectionName)
+            .subscribe((data: any) => {
+                this.paginationLength = data.count;
+            });
+
+        this.galleryProvider
+            .getCollectionImagesObservable(
+                this.collectionName,
+                this.pageIndex * this.pageSize,
+                this.pageSize
+            )
+            .subscribe((data) => {
+                this.captionedImages = data.data;
+            });
     }
 
     public handlePageEvent(e: PageEvent) {
@@ -54,11 +61,15 @@ export class GalleryShowcasePageComponent {
         this.pageIndex = e.pageIndex;
 
         // updating the displayed news items
-        this.captionedImages = this.galleryProvider.getCollectionImages(
-            this.collectionName,
-            this.pageIndex * this.pageSize,
-            this.pageSize
-        );
+        this.galleryProvider
+            .getCollectionImagesObservable(
+                this.collectionName,
+                this.pageIndex * this.pageSize,
+                this.pageSize
+            )
+            .subscribe((data) => {
+                this.captionedImages = data.data;
+            });
 
         window.scrollTo(0, 0);
     }

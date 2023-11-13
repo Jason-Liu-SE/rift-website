@@ -1,23 +1,41 @@
 import { Injectable } from '@angular/core';
 import { ICaptionCard } from '../interfaces/slideshow-image.interface';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Constants } from '../config/constants';
 
 @Injectable({
     providedIn: 'root'
 })
 export class GalleryProviderService {
-    private _images: ICaptionCard[];
+    private constants: Constants;
 
-    constructor() {}
+    constructor(private http: HttpClient) {
+        this.constants = new Constants();
+    }
 
-    public getCollectionImages(
+    public getCollectionImagesObservable(
         collectionName: string,
         startIndex: number,
         numItems: number
-    ): ICaptionCard[] {
-        return this._images.slice(startIndex, startIndex + numItems);
+    ): Observable<any> {
+        return this.http.get<any>(
+            this.constants.API_ENDPOINT +
+                `/gallery/get-collection?collection=${collectionName}&&startIndex=${startIndex}&&limit=${numItems}`
+        );
     }
 
-    public countCollectionImages(collection: string): number {
-        return this._images.length;
+    public getCollectionImageCountObservable(
+        collectionName: string
+    ): Observable<any> {
+        return this.http.get<any>(
+            this.constants.API_ENDPOINT +
+                `/gallery/count-collection-items?collection=${collectionName}`,
+            {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
     }
 }
