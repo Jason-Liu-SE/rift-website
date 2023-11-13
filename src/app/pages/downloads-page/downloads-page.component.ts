@@ -9,10 +9,11 @@ import { IDownloadCollection } from 'src/app/interfaces/download-collection.inte
     styleUrls: ['./downloads-page.component.scss']
 })
 export class DownloadsPageComponent {
-    public downloadCollections: IDownloadCollection[];
+    public downloadCollections!: IDownloadCollection[];
 
     constructor(private downloadsProvider: DownloadsProviderService) {
-        this.downloadCollections =
-            this.downloadsProvider.getDownloadCollections();
+        this.downloadsProvider
+            .getDownloadCollections()
+            .subscribe((data) => (this.downloadCollections = data.data));
     }
 }
