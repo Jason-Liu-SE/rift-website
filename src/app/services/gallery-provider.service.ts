@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ICaptionCard } from '../interfaces/slideshow-image.interface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Constants } from '../config/constants';
