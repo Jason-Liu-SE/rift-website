@@ -12,13 +12,15 @@ export class NewsItemProviderService {
     constructor(private http: HttpClient) {}
 
     public getNewsItems(startIndex: number, numItems: number): Observable<any> {
-        return this.http.get(
+        return this.http.get<any>(
             this.constants.API_ENDPOINT +
                 `/news/get-items?startIndex=${startIndex}&&limit=${numItems}`
         );
     }
 
     public countNewsItems(): Observable<any> {
-        return this.http.get(this.constants.API_ENDPOINT + `/news/count-items`);
+        return this.http.get<any>(
+            this.constants.API_ENDPOINT + `/news/count-items`
+        );
     }
 }
