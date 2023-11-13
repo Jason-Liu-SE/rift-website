@@ -41,7 +41,7 @@ export class GalleryShowcasePageComponent {
         // preparing data for pagination
         this.galleryProvider
             .getCollectionImageCountObservable(this.collectionName)
-            .subscribe((data: any) => {
+            .subscribe((data: { count: number }) => {
                 this.paginationLength = data.count;
             });
 
@@ -74,8 +74,8 @@ export class GalleryShowcasePageComponent {
                 this.pageIndex * this.pageSize,
                 this.pageSize
             )
-            .subscribe((data) => {
-                this.captionedImages = data.data;
+            .subscribe((data: ICaptionCard[]) => {
+                this.captionedImages = data;
 
                 this.imageCache[`${this.pageIndex}`] = this.captionedImages;
             });

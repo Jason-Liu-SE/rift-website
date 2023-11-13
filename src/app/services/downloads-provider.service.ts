@@ -12,8 +12,8 @@ export class DownloadsProviderService {
 
     constructor(private http: HttpClient) {}
 
-    public getDownloadCollections(): Observable<any> {
-        return this.http.get<any>(
+    public getDownloadCollections(): Observable<IDownloadCollection[]> {
+        return this.http.get<IDownloadCollection[]>(
             this.constants.API_ENDPOINT + `/downloads/get-all`
         );
     }

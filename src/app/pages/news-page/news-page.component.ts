@@ -21,7 +21,10 @@ export class NewsPageComponent {
     constructor(private newsItemProvider: NewsItemProviderService) {
         this.newsItemProvider
             .countNewsItems()
-            .subscribe((data) => (this.paginationLength = data.count));
+            .subscribe(
+                (data: { count: number }) =>
+                    (this.paginationLength = data.count)
+            );
 
         // setting the initial page items
         this.populateNewsItems();
@@ -42,6 +45,6 @@ export class NewsPageComponent {
     private populateNewsItems() {
         this.newsItemProvider
             .getNewsItems(this.pageIndex * this.pageSize, this.pageSize)
-            .subscribe((data) => (this.newsItems = data.data));
+            .subscribe((data: INewsItem[]) => (this.newsItems = data));
     }
 }

@@ -14,6 +14,9 @@ export class DownloadsPageComponent {
     constructor(private downloadsProvider: DownloadsProviderService) {
         this.downloadsProvider
             .getDownloadCollections()
-            .subscribe((data) => (this.downloadCollections = data.data));
+            .subscribe(
+                (data: IDownloadCollection[]) =>
+                    (this.downloadCollections = data)
+            );
     }
 }
