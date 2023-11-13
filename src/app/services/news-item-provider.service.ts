@@ -7,7 +7,9 @@ import { INewsItem } from '../interfaces/news-item.interface';
 export class NewsItemProviderService {
     private newsItems: INewsItem[];
 
-    constructor() {}
+    constructor() {
+        this.newsItems = [];
+    }
 
     public getNewsItems(startIndex: number, numItems: number): INewsItem[] {
         return this.newsItems.slice(startIndex, startIndex + numItems);

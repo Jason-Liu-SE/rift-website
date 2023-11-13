@@ -7,7 +7,9 @@ import { IDownloadCollection } from '../interfaces/download-collection.interface
 export class DownloadsProviderService {
     private downloadCollections: IDownloadCollection[];
 
-    constructor() {}
+    constructor() {
+        this.downloadCollections = [];
+    }
 
     public getDownloadCollections(): IDownloadCollection[] {
         return this.downloadCollections;
