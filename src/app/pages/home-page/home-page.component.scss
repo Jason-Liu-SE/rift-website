@@ -1,0 +1,25 @@
+@import '../../../font-sizes.scss';
+@import '../../../theme-colours.scss';
+
+.actions * {
+    margin: 0 10px;
+}
+
+.primary-button,
+.secondary-button {
+    width: 45%;
+    height: 3.5em;
+    padding: 20px 10px;
+    border-radius: 1px;
+}
+
+.secondary-button {
+    border: 1px solid $colour-primary;
+    color: $colour-primary;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+}
+
+.button-text {
+    font-size: $font-size-medium-plus;
+}

@@ -1,4 +1,29 @@
-<app-welcome-card></app-welcome-card>
+<app-welcome-card
+    [headerUrl]="'../../../assets/navbar/rift-logo.png'"
+    [backgroundUrl]="'../../../assets/home/1.png'"
+    [desc]="'This is a description'"
+>
+    <div class="actions">
+        <button
+            class="primary-button"
+            mat-flat-button
+            color="primary"
+            disableRipple
+            routerLink="/join"
+        >
+            <p class="button-text">Join</p>
+        </button>
+        <button
+            class="secondary-button"
+            mat-flat-button
+            color="accent"
+            disableRipple
+            routerLink="/about"
+        >
+            <p class="button-text">Learn More</p>
+        </button>
+    </div>
+</app-welcome-card>
 <app-section-card
     [backgroundType]="'dark'"
     [title]="'Hey there gamers!'"
@@ -9,4 +34,5 @@
     [contentPosition]="'left'"
     [img]="'../../../assets/home/grass-block.png'"
     [imgPos]="'left'"
-></app-section-card>
+>
+</app-section-card>

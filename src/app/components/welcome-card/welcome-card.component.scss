@@ -1,4 +1,5 @@
 @import '../../../font-sizes.scss';
+@import '../../../theme-colours.scss';
 
 $max-content-width: 500px;
 $max-image-height: 150px;
@@ -6,6 +7,7 @@ $max-image-height: 150px;
 .card-wrapper {
     overflow: hidden;
     max-height: 100vh;
+    position: relative;
 }
 
 .card {
@@ -14,12 +16,6 @@ $max-image-height: 150px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: radial-gradient(
-            transparent,
-            rgba(0, 0, 0, 0.315),
-            rgba(0, 0, 0, 0.56)
-        ),
-        url('../../../assets/home/1.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -28,28 +24,42 @@ $max-image-height: 150px;
     position: relative;
 }
 
+.card > * {
+    z-index: 2;
+}
+
+.card::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    content: '';
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
 .card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: clamp(0px, 50vh, 50%);
     transform: translate(0, -50%);
     width: 100%;
     max-width: 1000px;
-    white-space: pre-wrap;
+    white-space: pre-line;
     text-align: center;
 }
 
 .card-container {
     width: $max-content-width;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(3px);
+    // background-color: rgba(0, 0, 0, 0.2);
+    // backdrop-filter: blur(3px);
+    // border: 1px solid #333333;
     padding: 30px 10px;
     margin: 0px;
     border-radius: 10px;
-    border: 1px solid #333333;
-}
-
-.card-container > * {
-    margin: 10px 0;
 }
 
 .image-header {
@@ -57,22 +67,25 @@ $max-image-height: 150px;
 }
 
 .image {
-    height: $max-image-height;
+    max-height: $max-image-height;
+    max-width: 100%;
 }
 
 .description {
     color: rgb(240, 240, 240);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    font-weight: 800;
-    font-size: $font-size-medium;
+    font-size: $font-size-medium-plus;
+    line-height: 1.3em;
     width: 100%;
-    padding-bottom: 40px;
+    padding: 0.2em 0 1.3em 0;
 }
 
 .actions {
     width: 100%;
 }
 
-.actions * {
-    margin: 0 10px;
-}
+// @media (min-width: 1000px) {
+//     .card-content {
+//         justify-content: flex-start;
+//     }
+// }

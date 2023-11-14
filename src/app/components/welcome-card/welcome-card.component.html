@@ -1,29 +1,14 @@
 <div class="card-wrapper">
-    <div class="card">
+    <div class="card" [style.background-image]="'url(' + backgroundUrl + ')'">
         <div class="card-content">
             <div class="card-container">
                 <div class="image-header">
-                    <img
-                        class="image"
-                        src="../../../assets/welcome-card/the-rift-logo.png"
-                    />
+                    <img class="image" src="{{ headerUrl }}" />
                 </div>
                 <div class="description">
-                    This is a description for the great users of The Rift
+                    {{ description }}
                 </div>
-                <div class="actions">
-                    <button
-                        mat-flat-button
-                        color="primary"
-                        disableRipple
-                        routerLink="/join"
-                    >
-                        Join
-                    </button>
-                    <button mat-flat-button color="accent" disableRipple>
-                        Learn More
-                    </button>
-                </div>
+                <ng-content></ng-content>
             </div>
         </div>
     </div>
