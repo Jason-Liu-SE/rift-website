@@ -1,7 +1,6 @@
 @import '../../../theme-colours.scss';
 
 $h-logo-edge-padding: 10px;
-$link-hover-colour: rgb(255, 0, 230);
 
 .rift-navbar-wrapper {
     position: fixed;
@@ -74,8 +73,9 @@ $link-hover-colour: rgb(255, 0, 230);
 }
 
 .nav-link:hover {
-    color: $link-hover-colour;
-    border-color: $link-hover-colour;
+    color: $colour-secondary;
+    border-color: $colour-secondary;
+    filter: saturate(2);
 }
 
 .nav-link p {
