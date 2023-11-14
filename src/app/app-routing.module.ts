@@ -11,7 +11,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { GalleryShowcasePageComponent } from './pages/gallery-showcase-page/gallery-showcase-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { JoinPageComponent } from './pages/join-page/join-page.component';
-import { MapSeasonOnePageComponent } from './pages/map-season-one-page/map-season-one-page.component';
+import { BlueMapPageComponent } from './pages/blue-map-page/blue-map-page.component';
 
 const routes: Routes = [
     {
@@ -70,9 +70,10 @@ const routes: Routes = [
         component: PageTemplateComponent,
         title: 'The Rift - Map: Season 1',
         data: {
-            component: MapSeasonOnePageComponent,
+            component: BlueMapPageComponent,
             isTransparent: false,
-            showFooter: false
+            showFooter: false,
+            mapName: ''
         }
     },
     {
@@ -133,7 +134,7 @@ export const routingComponents = [
     GalleryShowcasePageComponent,
     ContactPageComponent,
     JoinPageComponent,
-    MapSeasonOnePageComponent
+    BlueMapPageComponent
 ];
 
 imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })];

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MapSeasonOnePageComponent } from './map-season-one-page.component';
+import { BlueMapPageComponent } from './blue-map-page.component';
 
 describe('MapSeasonOnePageComponent', () => {
-    let component: MapSeasonOnePageComponent;
-    let fixture: ComponentFixture<MapSeasonOnePageComponent>;
+    let component: BlueMapPageComponent;
+    let fixture: ComponentFixture<BlueMapPageComponent>;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [MapSeasonOnePageComponent]
+            declarations: [BlueMapPageComponent]
         });
-        fixture = TestBed.createComponent(MapSeasonOnePageComponent);
+        fixture = TestBed.createComponent(BlueMapPageComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

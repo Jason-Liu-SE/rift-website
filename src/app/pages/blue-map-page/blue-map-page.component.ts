@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Constants } from 'src/app/config/constants';
 
 @Component({
-    selector: 'app-map-season-one-page',
-    templateUrl: './map-season-one-page.component.html',
-    styleUrls: ['./map-season-one-page.component.scss']
+    selector: 'app-blue-map-page',
+    templateUrl: './blue-map-page.component.html',
+    styleUrls: ['./blue-map-page.component.scss']
 })
-export class MapSeasonOnePageComponent {
+export class BlueMapPageComponent {
     public bluemapUrl: string;
     public serverUrl: string;
 
@@ -15,8 +16,11 @@ export class MapSeasonOnePageComponent {
 
     private constants: Constants = new Constants();
 
-    constructor() {
-        this.bluemapUrl = this.constants.BLUEMAP_URL;
+    constructor(private route: ActivatedRoute) {
+        const mapNameProp = this.route.snapshot.data['mapName'];
+        const mapName = mapNameProp == null ? '' : mapNameProp;
+
+        this.bluemapUrl = this.constants.BLUEMAP_URL + '/' + mapName;
         this.serverUrl = this.constants.API_ENDPOINT;
     }
 
