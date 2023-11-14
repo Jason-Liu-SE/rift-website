@@ -1,5 +1,10 @@
 <div class="card-wrapper">
-    <div class="card" [style.background-image]="'url(' + backgroundUrl + ')'">
+    <div
+        class="card"
+        [style.background-image]="
+            backgroundUrl === '' ? null : 'url(' + backgroundUrl + ')'
+        "
+    >
         <div class="card-content">
             <div class="card-container">
                 <div class="image-header">
