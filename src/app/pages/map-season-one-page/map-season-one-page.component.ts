@@ -11,6 +11,7 @@ export class MapSeasonOnePageComponent {
     public serverUrl: string;
 
     public showHAMsg: boolean = true; // HA = Hardware Acceleration
+    public showControlMsg: boolean = true;
 
     private constants: Constants = new Constants();
 
@@ -21,5 +22,9 @@ export class MapSeasonOnePageComponent {
 
     public toggleHAMsg(): void {
         this.showHAMsg = !this.showHAMsg;
+    }
+
+    public toggleControlMsg(): void {
+        this.showControlMsg = !this.showControlMsg;
     }
 }

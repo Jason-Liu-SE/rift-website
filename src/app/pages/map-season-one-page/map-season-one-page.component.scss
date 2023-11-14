@@ -27,11 +27,18 @@
     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.53));
 }
 
-.message-pop-up {
+.tip-pop-up {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translate(-50%, 0);
+    z-index: 3;
+}
+
+.control-pop-up {
+    position: absolute;
+    bottom: 50%;
+    left: 10px;
     z-index: 3;
 }
 
