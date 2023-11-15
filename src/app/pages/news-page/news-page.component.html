@@ -22,6 +22,7 @@
         <app-news-display
             class="news-display"
             [newsItems]="newsItems"
+            *ngIf="newsItems.length > 0"
         ></app-news-display>
         <mat-paginator
             #paginator

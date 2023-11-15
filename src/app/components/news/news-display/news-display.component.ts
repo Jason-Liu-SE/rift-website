@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { INewsItem } from 'src/app/interfaces/news-item.interface';
 
 @Component({
@@ -6,6 +6,16 @@ import { INewsItem } from 'src/app/interfaces/news-item.interface';
     templateUrl: './news-display.component.html',
     styleUrls: ['./news-display.component.scss']
 })
-export class NewsDisplayComponent {
+export class NewsDisplayComponent implements OnInit {
     @Input({ required: true }) public newsItems!: INewsItem[];
+
+    public date!: Date;
+    public test = '';
+
+    ngOnInit() {
+        // parsing newsItem dates into the correct format
+        this.newsItems.map((item: INewsItem) => {
+            item.date = new Date(item.date).toDateString();
+        });
+    }
 }

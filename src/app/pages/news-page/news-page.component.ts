@@ -45,6 +45,9 @@ export class NewsPageComponent {
     private populateNewsItems() {
         this.newsItemProvider
             .getNewsItems(this.pageIndex * this.pageSize, this.pageSize)
-            .subscribe((data: INewsItem[]) => (this.newsItems = data));
+            .subscribe((data: INewsItem[]) => {
+                this.newsItems = data;
+                console.log(data);
+            });
     }
 }
