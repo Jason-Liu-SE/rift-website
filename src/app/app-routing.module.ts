@@ -38,14 +38,14 @@ const routes: Routes = [
         data: { component: GalleryPageComponent }
     },
     {
-        path: 'gallery/season-1',
+        path: 'gallery/season-5',
         component: PageTemplateComponent,
-        title: 'The Rift - Gallery: Season 1',
+        title: 'The Rift - Gallery: Season 5',
         data: {
             component: GalleryShowcasePageComponent,
-            title: 'Gallery: Season 1',
+            title: 'Gallery: Season 5',
             imageUrl: '../../../assets/home/2.png',
-            collection: 'season-1'
+            collection: 'season-5'
         }
     },
     {
@@ -66,9 +66,9 @@ const routes: Routes = [
         data: { component: MapPageComponent }
     },
     {
-        path: 'map/season-1',
+        path: 'map/season-5',
         component: PageTemplateComponent,
-        title: 'The Rift - Map: Season 1',
+        title: 'The Rift - Map: Season 5',
         data: {
             component: BlueMapPageComponent,
             isTransparent: false,

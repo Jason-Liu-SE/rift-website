@@ -12,20 +12,8 @@ export class GalleryPageComponent {
     public galleryCollections: ICardSelection[] = [
         {
             imageUrl: '../../../assets/home/1.png',
-            routerLink: '/gallery/season-1',
-            title: 'Season 1',
-            desc: ''
-        },
-        {
-            imageUrl: '../../../assets/home/2.png',
-            routerLink: '/gallery/season-2',
-            title: 'Season 2',
-            desc: ''
-        },
-        {
-            imageUrl: '../../../assets/home/3.png',
-            routerLink: '/gallery/season-3',
-            title: 'Season 3',
+            routerLink: '/gallery/season-5',
+            title: 'Season 5',
             desc: ''
         }
     ];

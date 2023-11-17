@@ -10,18 +10,8 @@ export class MapPageComponent implements OnInit {
     public mapItems: ICardSelection[] = [
         {
             imageUrl: '../../../assets/home/1.png',
-            routerLink: '/map/season-1',
-            title: 'Season 1'
-        },
-        {
-            imageUrl: '../../../assets/home/2.png',
-            routerLink: '/map/season-1',
-            title: 'Season 2'
-        },
-        {
-            imageUrl: '../../../assets/home/3.png',
-            routerLink: '/map/season-1',
-            title: 'Season 3'
+            routerLink: '/map/season-5',
+            title: 'Season 5'
         }
     ];
 
