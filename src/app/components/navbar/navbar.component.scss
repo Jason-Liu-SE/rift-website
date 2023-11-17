@@ -1,6 +1,6 @@
 @import '../../../theme-colours.scss';
 
-$h-logo-edge-padding: 0.1rem;
+$h-logo-edge-padding: 1rem;
 $navbar-height: 3rem;
 
 .rift-navbar-wrapper {
@@ -140,6 +140,8 @@ $navbar-height: 3rem;
 }
 
 @media only screen and (min-width: 60rem) {
+    $h-logo-edge-padding: 0.1rem;
+
     .hamburger-menu {
         display: none;
     }
