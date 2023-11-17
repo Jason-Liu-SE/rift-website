@@ -4,7 +4,27 @@
         isTransparent ? '' : 'opaque'
     }}"
 >
-    <nav class="rift-navbar">
+    <nav
+        class="rift-navbar {{ isHamburgerMenuVisible ? 'expand opaque' : '' }}"
+    >
+        <div class="hamburger-menu">
+            <div class="hamburger-menu-buttons">
+                <button
+                    class="hamburger-menu-button"
+                    (click)="toggleHamburgerMenu()"
+                    *ngIf="!isHamburgerMenuVisible"
+                >
+                    <mat-icon class="hamburger-icon">menu</mat-icon>
+                </button>
+                <button
+                    class="close-hamburger-menu-button"
+                    (click)="toggleHamburgerMenu()"
+                    *ngIf="isHamburgerMenuVisible"
+                >
+                    <mat-icon class="close-icon">close</mat-icon>
+                </button>
+            </div>
+        </div>
         <ul class="menu-links left-align">
             <li class="link-container">
                 <a class="nav-button" routerLink="/home">
@@ -16,7 +36,11 @@
                 </a>
             </li>
         </ul>
-        <ul class="menu-links center-align">
+        <ul
+            class="menu-links center-align {{
+                isHamburgerMenuVisible ? '' : 'hidden'
+            }}"
+        >
             <li class="link-container">
                 <a
                     class="nav-link"
@@ -75,7 +99,11 @@
                 >
             </li>
         </ul>
-        <ul class="menu-links right-align">
+        <ul
+            class="menu-links right-align {{
+                isHamburgerMenuVisible ? '' : 'hidden'
+            }}"
+        >
             <li class="link-container">
                 <div class="button-container">
                     <button
@@ -91,5 +119,6 @@
                 </div>
             </li>
         </ul>
+        <br class="{{ isHamburgerMenuVisible ? '' : 'hidden' }}" />
     </nav>
 </div>
