@@ -15,6 +15,12 @@ export class GalleryPageComponent {
             routerLink: '/gallery/season-5',
             title: 'Season 5',
             desc: ''
+        },
+        {
+            imageUrl: '../../../assets/home/1.png',
+            routerLink: '/gallery/season-6',
+            title: 'Season 6',
+            desc: ''
         }
     ];
 

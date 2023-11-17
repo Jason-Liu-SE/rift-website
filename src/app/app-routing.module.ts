@@ -49,6 +49,17 @@ const routes: Routes = [
         }
     },
     {
+        path: 'gallery/season-6',
+        component: PageTemplateComponent,
+        title: 'The Rift - Gallery: Season 6',
+        data: {
+            component: GalleryShowcasePageComponent,
+            title: 'Gallery: Season 6',
+            imageUrl: '../../../assets/home/2.png',
+            collection: 'season-6'
+        }
+    },
+    {
         path: 'gallery/season-2',
         component: PageTemplateComponent,
         title: 'The Rift - Gallery: Season 2',
