@@ -23,7 +23,7 @@ $news-item-padding: 15px;
 
 .news-item {
     width: calc(100% - 2 * $news-item-padding);
-    border: 1px solid rgba(0, 0, 0, 0.124);
+    outline: 1px solid rgba(0, 0, 0, 0.124);
     border-radius: 5px;
     padding: $news-item-padding;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
