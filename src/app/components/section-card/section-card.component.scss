@@ -34,7 +34,7 @@ $inner-padding-y: 20px;
 
 .section-card.padding-x {
     width: calc(100% - 2 * $edge-padding-x);
-    max-width: 1000px;
+    max-width: 50rem;
     padding-left: $edge-padding-x;
     padding-right: $edge-padding-x;
 }
