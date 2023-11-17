@@ -44,7 +44,8 @@ const routes: Routes = [
         data: {
             component: GalleryShowcasePageComponent,
             title: 'Gallery: Season 5',
-            imageUrl: '../../../assets/home/2.png',
+            imageUrl:
+                '../../../assets/general-background-images/season-5-circle.png',
             collection: 'season-5'
         }
     },
@@ -55,19 +56,9 @@ const routes: Routes = [
         data: {
             component: GalleryShowcasePageComponent,
             title: 'Gallery: Season 6',
-            imageUrl: '../../../assets/home/2.png',
+            imageUrl:
+                '../../../assets/general-background-images/magic-books-2.jpg',
             collection: 'season-6'
-        }
-    },
-    {
-        path: 'gallery/season-2',
-        component: PageTemplateComponent,
-        title: 'The Rift - Gallery: Season 2',
-        data: {
-            component: GalleryShowcasePageComponent,
-            title: 'Gallery: Season 2',
-            imageUrl: '../../../assets/home/3.png',
-            collection: 'season-2'
         }
     },
     {

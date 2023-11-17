@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ICardSelection } from 'src/app/interfaces/card-selection.interface';
 import { GalleryProviderService } from 'src/app/services/gallery-provider.service';
-import { forkJoin, lastValueFrom } from 'rxjs';
 
 @Component({
     selector: 'app-page-gallery',
@@ -11,13 +10,15 @@ import { forkJoin, lastValueFrom } from 'rxjs';
 export class GalleryPageComponent {
     public galleryCollections: ICardSelection[] = [
         {
-            imageUrl: '../../../assets/home/1.png',
+            imageUrl:
+                '../../../assets/general-background-images/season-5-circle.png',
             routerLink: '/gallery/season-5',
             title: 'Season 5',
             desc: ''
         },
         {
-            imageUrl: '../../../assets/home/1.png',
+            imageUrl:
+                '../../../assets/general-background-images/magic-books-2.jpg',
             routerLink: '/gallery/season-6',
             title: 'Season 6',
             desc: ''
