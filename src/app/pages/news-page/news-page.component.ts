@@ -47,7 +47,6 @@ export class NewsPageComponent {
             .getNewsItems(this.pageIndex * this.pageSize, this.pageSize)
             .subscribe((data: INewsItem[]) => {
                 this.newsItems = data;
-                console.log(data);
             });
     }
 }
