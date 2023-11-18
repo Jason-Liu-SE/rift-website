@@ -1,7 +1,7 @@
 @import '../../../theme-colours.scss';
 
 .paginated-image-showcase-container {
-    padding: 40px 50px;
+    padding: min(2rem, 4vh) min(3rem, 2vw);
 }
 
 .image-showcase-header {
