@@ -5,9 +5,6 @@
         }}"
     >
         <div class="containers {{ imagePositionClass }}">
-            <div class="image-container" *ngIf="showImage">
-                <img src="{{ imageUrl }}" class="image" />
-            </div>
             <div class="main-container" *ngIf="showTitle || showContent">
                 <h2 class="title {{ titlePositionClass }}" *ngIf="showTitle">
                     {{ title }}
@@ -25,6 +22,9 @@
                 <div class="dynamic-content {{ contentPositionClass }}">
                     <ng-content></ng-content>
                 </div>
+            </div>
+            <div class="image-container" *ngIf="showImage">
+                <img src="{{ imageUrl }}" class="image" />
             </div>
         </div>
     </div>
