@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class WelcomeCardComponent {
     @Input('desc') public description: string = '';
-    @Input() public backgroundUrl: string = '';
+    @Input() public backgroundUrl: string | null = '';
     @Input() public headerUrl: string = '';
 }

@@ -2,6 +2,11 @@
 <app-welcome-card
     [headerUrl]="'../../../assets/navbar/rift-logo.png'"
     [desc]="'This is a description'"
+    [backgroundUrl]="
+        showWelcomeComponentBackground
+            ? '../../../assets/general-background-images/spawn-walkway-1.jpg'
+            : null
+    "
 >
     <div class="actions">
         <button
