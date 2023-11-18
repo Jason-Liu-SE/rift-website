@@ -75,7 +75,7 @@ const routes: Routes = [
             component: BlueMapPageComponent,
             isTransparent: false,
             showFooter: false,
-            mapName: ''
+            mapName: 'season_5_overworld'
         }
     },
     {

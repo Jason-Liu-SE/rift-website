@@ -20,7 +20,11 @@ export class BlueMapPageComponent {
         const mapNameProp = this.route.snapshot.data['mapName'];
         const mapName = mapNameProp == null ? '' : mapNameProp;
 
-        this.bluemapUrl = this.constants.BLUEMAP_URL + '/' + mapName;
+        this.bluemapUrl =
+            this.constants.BLUEMAP_URL +
+            '/#' +
+            mapName +
+            this.constants.BLUEMAP_POSTFIX;
         this.serverUrl = this.constants.API_ENDPOINT;
     }
 
