@@ -6,7 +6,6 @@ $max-image-height: 150px;
 
 .card-wrapper {
     overflow: hidden;
-    max-height: 100vh;
     position: relative;
 }
 
@@ -16,11 +15,13 @@ $max-image-height: 150px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 56.25%; /* (img-height / img-width * container-width-percent) */
+    background-position: center center;
+    height: 85vh;
+    // width: 100%;
+    // height: 0;
+    // padding-top: 56.25%; /* (img-height / img-width * container-width-percent) */
     position: relative;
 }
 
@@ -43,9 +44,9 @@ $max-image-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: clamp(0px, 50vh, 50%);
-    transform: translate(0, -50%);
+    // position: absolute;
+    // top: clamp(0px, 50vh, 50%);
+    // transform: translate(0, -50%);
     width: 100%;
     max-width: 55rem;
     white-space: pre-line;
@@ -78,8 +79,4 @@ $max-image-height: 150px;
     line-height: 1.3em;
     width: 100%;
     padding: 0.2em 0 1.3em 0;
-}
-
-.actions {
-    width: 100%;
 }
