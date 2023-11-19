@@ -6,10 +6,19 @@ $collection-card-height: 300px;
 $hover-animation-duration: 0.3s;
 $hover-animation-text-offset: -20px;
 
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .collection-section {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 40px 0;
+    height: 100%;
+    flex: 1;
 }
 
 .collection-wrapper {
