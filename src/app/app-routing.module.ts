@@ -68,7 +68,7 @@ const routes: Routes = [
         data: { component: MapPageComponent }
     },
     {
-        path: 'map/season-5',
+        path: 'map/season-5-overworld',
         component: PageTemplateComponent,
         title: 'The Rift - Map: Season 5',
         data: {
@@ -76,6 +76,28 @@ const routes: Routes = [
             isTransparent: false,
             showFooter: false,
             mapName: 'season_5_overworld'
+        }
+    },
+    {
+        path: 'map/season-5-nether',
+        component: PageTemplateComponent,
+        title: 'The Rift - Map: Season 5',
+        data: {
+            component: BlueMapPageComponent,
+            isTransparent: false,
+            showFooter: false,
+            mapName: 'season_5_nether'
+        }
+    },
+    {
+        path: 'map/season-5-end',
+        component: PageTemplateComponent,
+        title: 'The Rift - Map: Season 5',
+        data: {
+            component: BlueMapPageComponent,
+            isTransparent: false,
+            showFooter: false,
+            mapName: 'season_5_end'
         }
     },
     {
