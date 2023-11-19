@@ -12,7 +12,14 @@
             <a class="overlay-content" routerLink="{{ item.routerLink }}">
                 <hr class="top-bar" />
                 <h3 class="title">{{ item.title }}</h3>
-                <p class="description" *ngIf="item.desc">{{ item.desc }}</p>
+                <p
+                    class="description {{
+                        alwaysShowDesc ? 'high-contrast' : 'transparent'
+                    }}"
+                    *ngIf="item.desc"
+                >
+                    {{ item.desc }}
+                </p>
                 <hr class="bottom-bar" />
             </a>
         </div>

@@ -9,4 +9,6 @@ import { ICardSelection } from 'src/app/interfaces/card-selection.interface';
 export class CardSelectionSectionComponent {
     @Input({ alias: 'items', required: true })
     public items!: ICardSelection[];
+
+    @Input() public alwaysShowDesc: boolean = false;
 }
