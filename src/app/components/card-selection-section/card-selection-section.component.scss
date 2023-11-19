@@ -38,12 +38,13 @@ $hover-animation-text-offset: -0.5rem;
 .collection-card {
     width: $collection-card-width;
     height: $collection-card-height;
-    border: 1px solid black;
+    outline: 1px solid black;
     border-radius: 5px;
     margin: 10px;
     overflow: hidden;
     transition: scale $hover-animation-duration,
-        filter $hover-animation-duration, border $hover-animation-duration;
+        filter $hover-animation-duration, border $hover-animation-duration,
+        outline $hover-animation-duration;
     filter: drop-shadow(2px 2px 5px #00000054);
     text-align: center;
     word-break: break-word;
@@ -51,7 +52,7 @@ $hover-animation-text-offset: -0.5rem;
 
 .collection-card:hover {
     scale: 1.02;
-    border: 2px solid black;
+    outline: 2px solid black;
     cursor: pointer;
     filter: drop-shadow(2px 2px 5px #000000);
 }
