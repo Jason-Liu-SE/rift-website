@@ -72,7 +72,7 @@ $hover-animation-text-offset: -20px;
     font-size: $font-size-x-large;
     line-height: $font-size-x-large;
     font-weight: 600;
-    color: $colour-miami-pink;
+    color: $colour-secondary;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     margin: 0;
 }
@@ -95,7 +95,7 @@ $hover-animation-text-offset: -20px;
 }
 
 .top-bar {
-    border: 1px solid $colour-secondary;
+    border: 1px solid $colour-blue-grey;
     border-radius: 5px;
     width: calc($collection-card-width / 2);
     margin-bottom: 20px;
@@ -107,7 +107,7 @@ $hover-animation-text-offset: -20px;
 }
 
 .bottom-bar {
-    border: 1px solid $colour-secondary;
+    border: 1px solid $colour-blue-grey;
     border-radius: 5px;
     width: calc($collection-card-width / 2);
     margin-top: 20px;
@@ -121,168 +121,114 @@ $hover-animation-text-offset: -20px;
 @keyframes title-hover-effect {
     0% {
         text-shadow: none;
-        background-color: $colour-miami-pink;
+        background-color: $colour-secondary;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    10% {
+    9% {
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink
+            $colour-violet 0%,
+            $colour-secondary 10%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    20% {
+    18% {
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink
+            $colour-violet 10%,
+            $colour-secondary 20%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    30% {
+    27% {
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink
+            $colour-violet 20%,
+            $colour-secondary 30%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    40% {
+    36% {
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink
+            $colour-violet 30%,
+            $colour-secondary 40%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    50% {
+    45% {
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink
+            $colour-violet 40%,
+            $colour-secondary 50%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    60% {
+    54% {
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink
+            $colour-violet 50%,
+            $colour-secondary 60%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    70% {
+    63% {
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-miami-pink,
-            $colour-miami-pink,
-            $colour-miami-pink
+            $colour-violet 60%,
+            $colour-secondary 70%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
-    80% {
+    72% {
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-miami-pink,
-            $colour-miami-pink
+            $colour-violet 70%,
+            $colour-secondary 80%
+        );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    81% {
+        text-shadow: none;
+        background-image: linear-gradient(
+            45deg,
+            $colour-violet 80%,
+            $colour-secondary 90%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -293,17 +239,8 @@ $hover-animation-text-offset: -20px;
         text-shadow: none;
         background-image: linear-gradient(
             45deg,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-galactic-purple,
-            $colour-miami-pink
+            $colour-violet 90%,
+            $colour-secondary 100%
         );
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -312,7 +249,7 @@ $hover-animation-text-offset: -20px;
     }
     100% {
         text-shadow: none;
-        background-color: $colour-galactic-purple;
+        background-color: $colour-violet;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;

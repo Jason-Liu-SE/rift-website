@@ -2,7 +2,7 @@
 @import 'theme-colours';
 @include mat-core();
 
-$app-primary: mat-palette($custom-galactic-purple);
+$app-primary: mat-palette($custom-violet);
 $app-accent: mat-palette($custom-blue-grey);
 $app-warn: mat-palette($mat-deep-orange);
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
