@@ -186,8 +186,8 @@ $navbar-height: 3rem;
     }
 
     .nav-link:hover {
-        color: $colour-secondary;
-        border-color: $colour-secondary;
+        color: $colour-accent;
+        border-color: $colour-accent;
         filter: saturate(2);
     }
 
