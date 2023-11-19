@@ -1,10 +1,10 @@
 @import '../../../font-sizes.scss';
 @import '../../../theme-colours.scss';
 
-$collection-card-width: 600px;
-$collection-card-height: 300px;
+$collection-card-width: 15rem;
+$collection-card-height: 25rem;
 $hover-animation-duration: 0.3s;
-$hover-animation-text-offset: -20px;
+$hover-animation-text-offset: -0.5rem;
 
 :host {
     display: flex;
@@ -26,8 +26,7 @@ $hover-animation-text-offset: -20px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: calc(2.1 * $collection-card-width);
-    max-width: 100%;
+    width: 55rem;
 }
 
 .collection-card-grid {
@@ -46,6 +45,8 @@ $hover-animation-text-offset: -20px;
     transition: scale $hover-animation-duration,
         filter $hover-animation-duration, border $hover-animation-duration;
     filter: drop-shadow(2px 2px 5px #00000054);
+    text-align: center;
+    word-break: break-word;
 }
 
 .collection-card:hover {
@@ -95,8 +96,12 @@ $hover-animation-text-offset: -20px;
     line-height: $font-size-medium;
     font-weight: 500;
     margin: 0;
-    color: $colour-light-grey;
-    filter: opacity(0);
+    color: $colour-accent;
+    transition: color $hover-animation-duration ease;
+}
+
+.collection-card:not(:hover) .description.high-contrast {
+    color: $colour-light-text;
 }
 
 .collection-card:hover .description {
@@ -125,6 +130,10 @@ $hover-animation-text-offset: -20px;
 
 .collection-card:hover .bottom-bar {
     animation: slide-in-from-left $hover-animation-duration ease forwards;
+}
+
+.transparent {
+    filter: opacity(0);
 }
 
 @keyframes title-hover-effect {
@@ -411,10 +420,8 @@ $hover-animation-text-offset: -20px;
 
 @keyframes slide-in-from-below {
     0% {
-        filter: opacity(0);
     }
     70% {
-        filter: opacity(0);
     }
     100% {
         filter: opacity(1);
