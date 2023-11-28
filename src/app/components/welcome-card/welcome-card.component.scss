@@ -81,11 +81,20 @@ $max-image-height: 150px;
     padding: 0.2em 0 1.3em 0;
 }
 
-.down-icon {
+.down-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 50vw;
     transform: translate(-50%, -50%);
-    color: white;
     z-index: 3;
+}
+
+.down-icon {
+    color: white;
+    font-size: 3rem;
+    width: fit-content;
+    height: fit-content;
 }
