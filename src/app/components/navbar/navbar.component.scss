@@ -14,7 +14,8 @@ $navbar-height: 3rem;
     display: flex;
     width: 100%;
     border-style: none none solid none;
-    border-color: rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
     border-width: 1px;
     background-color: rgba(0, 0, 0, 0.368);
 }
