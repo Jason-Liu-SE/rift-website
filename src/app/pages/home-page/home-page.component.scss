@@ -2,7 +2,7 @@
 @import '../../../theme-colours.scss';
 
 .actions * {
-    margin: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 .primary-button,
@@ -36,6 +36,10 @@
 }
 
 @media only screen and (min-width: 60rem) {
+    .actions * {
+        margin: 0.5rem;
+    }
+
     .primary-button,
     .secondary-button {
         width: 45%;
