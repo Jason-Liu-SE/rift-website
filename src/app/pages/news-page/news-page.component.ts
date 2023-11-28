@@ -15,8 +15,9 @@ export class NewsPageComponent {
     public pageSize: number = 10;
     public pageIndex: number = 0;
     public pageEvent!: PageEvent;
-
     public newsItems: INewsItem[] = [];
+
+    private newsItemCache: Record<string, INewsItem[]> = {};
 
     constructor(private newsItemProvider: NewsItemProviderService) {
         this.newsItemProvider
@@ -37,7 +38,14 @@ export class NewsPageComponent {
         this.pageIndex = e.pageIndex;
 
         // updating the displayed news items
-        this.populateNewsItems();
+        this.newsItems = [];
+
+        // grabbing images from cache, if they have been cached
+        if (this.newsItemCache[`${this.pageIndex}`]) {
+            this.newsItems = this.newsItemCache[`${this.pageIndex}`];
+        } else {
+            this.populateNewsItems();
+        }
 
         window.scrollTo(0, 0);
     }
@@ -47,6 +55,8 @@ export class NewsPageComponent {
             .getNewsItems(this.pageIndex * this.pageSize, this.pageSize)
             .subscribe((data: INewsItem[]) => {
                 this.newsItems = data;
+
+                this.newsItemCache[`${this.pageIndex}`] = this.newsItems;
             });
     }
 }
