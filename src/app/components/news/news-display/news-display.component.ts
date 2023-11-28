@@ -15,4 +15,12 @@ export class NewsDisplayComponent {
     public newsItemToDateString(item: INewsItem): string {
         return new Date(item.date).toDateString();
     }
+
+    public isBannerImageValid(bannerImg: string | undefined): boolean {
+        if (bannerImg && bannerImg.length > 0) {
+            return true;
+        }
+
+        return false;
+    }
 }

@@ -4,7 +4,7 @@
             <img
                 class="banner-img"
                 [src]="item.bannerImg"
-                *ngIf="item.bannerImg !== ''"
+                *ngIf="isBannerImageValid(item.bannerImg)"
             />
             <div class="news-item-content">
                 <h2 class="title">{{ item.title }}</h2>
