@@ -1,28 +1,134 @@
-# TheRiftSite
+# The Rift website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+The Rift website is a single-page application (SPA) for the Minecraft server
+community. It is built with Angular 16, Angular Material, TypeScript, and
+SCSS.
 
-## Development server
+The frontend is responsible for the site's pages, navigation, reusable
+presentation components, and API requests. Some content is supplied by
+separate services; see [External services](#external-services).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requirements
 
-## Code scaffolding
+- Node.js 18.x (the project currently uses Angular 16 and TypeScript 5.1)
+- npm 9.x or a compatible npm version
+- A modern browser
+- The separate The Rift API server for dynamic news, gallery, and download
+  content
+- A BlueMap server for the interactive map pages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting started
 
-## Build
+From the repository root:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm ci
+npm start
+```
 
-## Running unit tests
+Open <http://localhost:4200/> after the development server has finished
+compiling.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### External services
 
-## Running end-to-end tests
+The default local endpoints are defined in
+[`src/app/config/constants.ts`](./src/app/config/constants.ts):
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+| Service | Default URL | Used for |
+| --- | --- | --- |
+| The Rift API | `http://localhost:4000` | News, gallery, and download requests |
+| BlueMap | `http://localhost:8100` | Embedded world maps |
 
-## Further help
+The frontend does not start either service. Start them separately before
+testing features that depend on them. The home page and static pages can still
+be developed without the API, but requests for dynamic content will fail if
+the API is unavailable. The map pages require a reachable BlueMap instance.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# rift-website
+## Npm scripts
+
+| Command | Description |
+| --- | --- |
+| `npm start` | Start the development server at `http://localhost:4200/`. |
+| `npm run build` | Create a production build in `dist/the-rift-site`. |
+| `npm run watch` | Rebuild continuously using the development configuration. |
+| `npm test` | Run the unit tests with Karma and Jasmine. |
+| `npm run ng -- <command>` | Run an Angular CLI command, for example `npm run ng -- generate component components/example`. |
+
+## Testing
+
+Run the unit tests with:
+
+```bash
+npm test
+```
+
+>>> TODO: Write unit and integration tests
+
+## Project structure
+
+```text
+src/
+├── app/
+│   ├── components/       Reusable UI components
+│   ├── config/           Runtime constants such as service endpoints
+│   ├── directives/       Custom Angular directives
+│   ├── interfaces/       TypeScript data contracts
+│   ├── pages/            Routed page components
+│   ├── services/         API clients and shared application services
+│   ├── utilities/        Small shared utilities and pipes
+│   ├── app-routing.module.ts
+│   ├── app.module.ts
+│   └── app.component.*
+├── assets/               Images, icons, and other static assets
+├── main.ts               Application bootstrap
+├── styles.scss           Global styles
+├── theme.scss            Angular Material theme
+├── theme-colours.scss    Shared theme colours
+└── font-sizes.scss       Shared typography values
+```
+
+Generally, use Angular commands to create new components, services, etc as
+necessary rather than creating them.
+
+E.g.
+```cmd
+npm run ng -- generate component components/example-card
+npm run ng -- generate component pages/example-page
+npm run ng -- generate service services/example
+npm run ng -- generate directive directives/example
+npm run ng -- generate interface interfaces/example
+```
+
+## Architecture
+
+The application is bootstrapped from `src/main.ts` into `AppModule`.
+`AppRoutingModule` defines the public routes and uses `PageTemplateComponent`
+as the shared page shell. Page-specific components are supplied through route
+data and rendered by the page-template directive.
+
+The main architectural areas are:
+
+- **Pages:** Route-level views such as home, news, gallery, map, downloads,
+  contact, and join.
+- **Components:** Reusable cards, navigation, footer, slideshow, contact, and
+  other visual building blocks.
+- **Services:** `HttpClient`-based providers for API-backed data and shared
+  behavior.
+- **Interfaces:** Typed models used by components and services when handling
+  API data.
+- **Assets and styles:** Static images plus global and Angular Material theme
+  styles bundled by the Angular CLI.
+
+## Troubleshooting
+
+### The app loads but dynamic content is missing
+
+Confirm that the API server is running at `http://localhost:4000`, or update
+`src/app/config/constants.ts` to the correct endpoint. Check the browser
+developer console for failed requests and cross-origin (CORS) errors.
+
+### Map pages are blank
+
+Confirm that BlueMap is running at `http://localhost:8100` and that its
+configured map names match the routes in
+`src/app/app-routing.module.ts`.
